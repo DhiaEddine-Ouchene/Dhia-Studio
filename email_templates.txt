@@ -1,0 +1,54 @@
+=========================================
+CLIENT INQUIRY EMAIL TEMPLATE
+=========================================
+
+[EMAIL SUBJECT LINE]
+New High-Ticket Client Project Brief Received: {{Client Full Name}}
+
+[EMAIL BODY LAYOUT]
+=========================================
+DHIA STUDIO — INBOUND BUSINESS LEAD
+=========================================
+
+CLIENT INFORMATION:
+- Prospect Name: {{Client Full Name}}
+- Corporate Email: {{Email Address}}
+- Brand/Company: {{Company Name}}
+
+PROJECT PARAMETERS:
+- Requested Capabilities: {{Project Type}}
+- Allocated Capital/Budget: {{Estimated Budget}}
+- Required Timeframe/Deadline: {{Project Timeline}}
+
+STRATEGIC INTAKE SUMMARY:
+"{{Project Details}}"
+
+=========================================
+ACTION REQUIRED: Evaluate project parameters, verify portfolio availability, and generate a customized contract response within 24 business hours.
+
+
+=========================================
+EDITOR APPLICATION EMAIL TEMPLATE
+=========================================
+
+[EMAIL SUBJECT LINE]
+New Roster Application: {{Creator Full Name}} — {{Primary Creative Role}}
+
+[EMAIL BODY LAYOUT]
+=========================================
+DHIA STUDIO — TALENT ACQUISITION FUNNEL
+=========================================
+
+APPLICANT PROFILE:
+- Talent Name: {{Creator Full Name}}
+- Contact Email: {{Contact Email Address}}
+- Designated Core Competency: {{Primary Creative Role}}
+
+TECHNICAL STACK & MASTERY:
+- Confirmed Software Mastery: {{Software Mastery Checkboxes}}
+
+CREATIVE EVIDENCE:
+- Secure Portfolio Link: {{Portfolio Link URL}}
+
+=========================================
+ACTION REQUIRED: Review the portfolio hyperlink, verify software proficiencies match active project queues, and tag the applicant inside the master agency production roster if approved.

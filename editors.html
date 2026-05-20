@@ -1,0 +1,396 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Geist:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        body {
+            background-color: #050507;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(139, 92, 246, 0.3);
+            box-shadow: 0 20px 40px -15px rgba(139, 92, 246, 0.15), 0 0 50px -10px rgba(6, 182, 212, 0.1);
+            transform: translateY(-4px);
+        }
+        .neon-glow-purple {
+            box-shadow: 0 0 40px rgba(139, 92, 246, 0.15);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 10%, #8B5CF6 50%, #06B6D4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-overlay {
+            background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.05) 0%, #050507 90%);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #050507;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(139, 92, 246, 0.3);
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating { animation: float 6s ease-in-out infinite; }
+        
+        @keyframes drift-slow {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(50px, -80px) scale(1.2); }
+            66% { transform: translate(-30px, 40px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        @keyframes drift-slower {
+            0% { transform: translate(0px, 0px) scale(1.1); }
+            50% { transform: translate(-60px, 50px) scale(0.85); }
+            100% { transform: translate(0px, 0px) scale(1.1); }
+        }
+        .animate-drift-slow {
+            animation: drift-slow 18s ease-in-out infinite;
+        }
+        .animate-drift-slower {
+            animation: drift-slower 25s ease-in-out infinite;
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-slide-up { animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-container": "#06B6D4",
+                      "primary": "#8B5CF6",
+                      "surface-bright": "#121214",
+                      "primary-container": "#8B5CF6",
+                      "on-tertiary-container": "#ffffff",
+                      "on-secondary-fixed": "#ffffff",
+                      "secondary-fixed": "#27272a",
+                      "inverse-primary": "#7c3aed",
+                      "surface-container": "rgba(255, 255, 255, 0.02)",
+                      "outline-variant": "rgba(255, 255, 255, 0.1)",
+                      "tertiary": "#06B6D4",
+                      "tertiary-fixed": "#06B6D4",
+                      "on-background": "#ffffff",
+                      "surface-container-lowest": "#020203",
+                      "primary-fixed": "#8B5CF6",
+                      "error": "#ef4444",
+                      "on-primary-fixed-variant": "#ffffff",
+                      "primary-fixed-dim": "#8B5CF6",
+                      "on-error": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed-dim": "#06B6D4",
+                      "error-container": "#ef4444",
+                      "secondary": "#a1a1aa",
+                      "on-secondary": "#18181b",
+                      "on-surface-variant": "#a1a1aa",
+                      "on-secondary-fixed-variant": "#ffffff",
+                      "on-tertiary-fixed-variant": "#ffffff",
+                      "surface": "#050507",
+                      "surface-container-low": "#0a0a0c",
+                      "background": "#050507",
+                      "surface-variant": "#0c0c0e",
+                      "secondary-container": "rgba(255, 255, 255, 0.04)",
+                      "inverse-surface": "#ffffff",
+                      "secondary-fixed-dim": "#a1a1aa",
+                      "on-tertiary-fixed": "#050507",
+                      "outline": "rgba(255, 255, 255, 0.2)",
+                      "on-primary-fixed": "#050507",
+                      "on-primary-container": "#ffffff",
+                      "on-secondary-container": "#ffffff",
+                      "surface-container-highest": "#18181b",
+                      "surface-tint": "#8B5CF6",
+                      "surface-container-high": "#0f0f12",
+                      "on-error-container": "#ffffff",
+                      "on-surface": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "inverse-on-surface": "#050507",
+                      "surface-dim": "#050507"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.875rem",
+                      "xl": "1.25rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit-xs": "0.25rem",
+                      "unit-lg": "2rem",
+                      "unit-md": "1rem",
+                      "container-max": "1280px",
+                      "unit-sm": "0.5rem",
+                      "margin-mobile": "1rem",
+                      "gutter": "2rem",
+                      "unit-xl": "4rem"
+              },
+              "fontFamily": {
+                      "headline-xl": ["Montserrat"],
+                      "body-md": ["Geist"],
+                      "headline-md": ["Montserrat"],
+                      "headline-lg": ["Montserrat"],
+                      "headline-lg-mobile": ["Montserrat"],
+                      "label-sm": ["Geist"],
+                      "body-lg": ["Geist"]
+              },
+              "fontSize": {
+                      "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="custom-scrollbar">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-white/5">
+<div class="flex justify-between items-center px-unit-lg h-20 max-w-container-max mx-auto">
+<a href="index.html" class="font-headline-md text-headline-md font-extrabold tracking-tighter text-primary">
+                Dhia Studio
+            </a>
+<div class="hidden md:flex items-center gap-unit-lg">
+<a class="text-on-surface-variant font-medium hover:text-tertiary transition-all duration-300 font-body-md text-body-md" href="index.html#portfolio">Portfolio</a>
+<a class="text-on-surface-variant font-medium hover:text-tertiary transition-all duration-300 font-body-md text-body-md" href="index.html#services">Services</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="#">Join Team</a>
+</div>
+<div class="flex items-center gap-unit-md">
+<a href="index.html#contact" class="bg-gradient-to-r from-primary-container to-tertiary-container text-white px-unit-md py-unit-sm rounded-lg font-label-sm text-label-sm hover:scale-105 transition-transform duration-300 ease-out shadow-lg shadow-primary/20 flex items-center gap-2 group relative overflow-hidden">
+    <span class="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-in-out"></span>
+    <span class="relative z-10">Hire Us</span>
+</a>
+</div>
+</div>
+</nav>
+
+<main class="pt-24 min-h-screen relative overflow-hidden flex items-center justify-center">
+    <!-- Dynamic Background -->
+    <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 hero-overlay z-10"></div>
+        <img class="w-full h-full object-cover grayscale opacity-10 scale-110" data-alt="High-end studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJZ59XV8KxzpjuMIWopfeWjiTTBbDh-GziUnd5bmPshT1WHZFFvC6ld4mJNOrYIbvg8ByEpMoDjYqrqP9tdx551YVYyrwPJCg1NJng88ZBIWCINj5FpDLESE0Crrsg1DCJqWKwS2Af99oVIxsPuODE7V8tkuKD4KJMeWm16_tH979go0BQJJeZHNlYdyl-LLAA-oVRxjSMKUjkPFI8GzoDoMco4_nzgZpqHqMu04b2tT0JW7FDO932vlvoNOwTC1rTHf9KWFrMGg">
+    </div>
+
+    <div class="max-w-4xl w-full mx-auto px-margin-mobile relative z-20 py-12">
+        <div class="text-center mb-10">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-tertiary/10 text-tertiary border border-tertiary/20 font-label-sm text-label-sm mb-4 tracking-widest uppercase">Careers</span>
+            <h1 class="font-headline-lg text-headline-lg mb-4">
+                <span class="gradient-text">Join The Elite Roster</span>
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                We're always looking for visionary video editors, colorists, and motion designers. Connect with us and let's craft cinematic perfection together.
+            </p>
+        </div>
+
+        <div class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden border border-white/10 shadow-2xl shadow-primary/10">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -ml-20 -mt-20 pointer-events-none"></div>
+            
+            <form id="editor-form" class="flex flex-col gap-6 relative z-10" onsubmit="return handleEditorForm(event)">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="flex flex-col gap-2 group">
+            <label class="font-label-sm text-label-sm text-on-surface-variant group-focus-within:text-tertiary transition-colors" for="editor-name">Full Name</label>
+            <input type="text" id="editor-name" name="Creator Full Name" class="bg-surface-container/50 bg-white/[0.03] border border-outline/30 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-tertiary focus:ring-1 focus:ring-tertiary transition-all backdrop-blur-sm hover:border-outline/60" placeholder="Jane Doe" required>
+        </div>
+        <div class="flex flex-col gap-2 group">
+            <label class="font-label-sm text-label-sm text-on-surface-variant group-focus-within:text-tertiary transition-colors" for="editor-email">Email Address</label>
+            <input type="email" id="editor-email" name="Contact Email Address" class="bg-surface-container/50 border bg-white/[0.03] border-outline/30 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-tertiary focus:ring-1 focus:ring-tertiary transition-all backdrop-blur-sm hover:border-outline/60" placeholder="jane@editor.com" required>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="flex flex-col gap-2 group">
+            <label class="font-label-sm  text-label-sm text-on-surface-variant group-focus-within:text-tertiary transition-colors" for="portfolio-url">Portfolio URL</label>
+            <input type="url" id="portfolio-url" name="Portfolio Link URL" class="bg-surface-container/50 bg-white/[0.03] border border-outline/30 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-tertiary focus:ring-1 focus:ring-tertiary transition-all backdrop-blur-sm hover:border-outline/60" placeholder="https://vimeo.com/... or yourwebsite.com" required>
+        </div>
+        <div class="flex flex-col gap-2 group">
+            <label class="font-label-sm text-label-sm text-on-surface-variant group-focus-within:text-tertiary transition-colors" for="primary-skill">Primary Specialization</label>
+            <div class="relative">
+                <select id="primary-skill" name="Primary  Creative Role" class="w-full *:bg-black bg-white/[0.03] bg-surface-container/50 border border-outline/30 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-tertiary focus:ring-1 focus:ring-tertiary transition-all  backdrop-blur-sm appearance-none hover:border-outline/60 " required>
+                    <option value="" disabled selected>Select your strongest skill</option>
+                    <option value="Video Editing">Video Editing</option>
+                    <option value="Color Grading">Color Grading</option>
+                    <option value="Motion Graphics / VFX">Motion Graphics / VFX</option>
+                    <option value="Sound Design">Sound Design</option>
+                </select>
+                <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">expand_more</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col gap-2 group">
+        <label class="font-label-sm  text-label-sm text-on-surface-variant group-focus-within:text-tertiary transition-colors" for="software">Software Mastery (e.g., Premiere Pro, DaVinci Resolve, After Effects)</label>
+        <input type="text" id="software" name="Software Mastery Checkboxes" class="bg-surface-container/50 border bg-white/[0.03] border-outline/30 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-tertiary focus:ring-1 focus:ring-tertiary transition-all backdrop-blur-sm hover:border-outline/60" placeholder="DaVinci Resolve, Premiere Pro, Blender..." required>
+    </div>
+
+    <div class="flex flex-col gap-2 group">
+        <label class="font-label-sm text-label-sm text-on-surface-variant group-focus-within:text-tertiary transition-colors" for="about-you">Tell us about yourself and your approach to editing</label>
+        <textarea id="about-you" name="Applicant Approach and Bio" rows="4" class="bg-surface-container/50 border bg-white/[0.03] border-outline/30 rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-tertiary focus:ring-1 focus:ring-tertiary transition-all backdrop-blur-sm resize-none hover:border-outline/60" placeholder="I specialize in high-energy commercial edits and I love experimenting with..." required></textarea>
+    </div>
+
+    <button type="submit" class="mt-4 bg-gradient-to-r from-primary-container to-tertiary-container text-white font-bold py-4 rounded-lg hover:scale-[1.02] transition-transform duration-300 shadow-lg shadow-tertiary/20 relative overflow-hidden group">
+        <span class="absolute inset-0 w-full h-full bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+        <span class="relative z-10 flex items-center justify-center gap-2">
+            Submit Application
+            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">rocket_launch</span>
+        </span>
+    </button>
+</form>
+        </div>
+    </div>
+</main>
+
+<footer class="w-full py-unit-xl bg-surface-container-lowest border-t border-white/5 relative z-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-unit-lg max-w-container-max mx-auto gap-unit-md">
+<div class="flex flex-col gap-unit-xs">
+<div class="font-headline-md text-headline-md font-bold text-primary">Dhia Studio</div>
+<div class="font-body-md text-body-md text-on-surface-variant">© 2024 Dhia Studio. Cinematic Production Excellence.</div>
+</div>
+<div class="flex gap-unit-lg">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Email</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Vimeo</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">LinkedIn</a>
+</div>
+</div>
+</footer>
+
+<script>
+    // Reveal animation
+    const form = document.querySelector('.glass-card');
+    form.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+    
+    setTimeout(() => {
+        form.classList.add('opacity-100', 'translate-y-0');
+        form.classList.remove('opacity-0', 'translate-y-10');
+    }, 100);
+
+    // Editor Form Handler
+    function handleEditorForm(e) {
+        e.preventDefault();
+        const name = document.getElementById('editor-name').value;
+        const email = document.getElementById('editor-email').value;
+        const portfolio = document.getElementById('portfolio-url').value;
+        const role = document.getElementById('primary-skill').value;
+        const software = document.getElementById('software').value;
+        const about = document.getElementById('about-you').value;
+
+        const btn = document.querySelector('#editor-form button[type=submit]');
+        const originalHTML = btn.innerHTML;
+        
+        // Show premium glassmorphic loading state
+        btn.disabled = true;
+        btn.innerHTML = `
+            <span class="relative z-10 flex items-center justify-center gap-2">
+                <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Transmitting Application...
+            </span>
+        `;
+
+        // Submit via AJAX/Fetch directly to Web3Forms to bypass server-side Cloudflare blocks
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                access_key: 'e89cb276-a31d-4701-8cc8-fc52013ef37e',
+                subject: `New Roster Application: ${name} — ${role}`,
+                from_name: 'Dhia Studio Talent',
+                'Talent Name': name,
+                'Talent Email': email,
+                'Creative Role': role,
+                'Software Mastery': software,
+                'Portfolio URL': portfolio,
+                'About the Applicant': about
+            })
+        })
+        .then(response => {
+            if (response.ok) {
+                // Show gorgeous Success UI card with micro-animation
+                const formEl = document.getElementById('editor-form');
+                formEl.classList.add('animate-slide-up');
+                formEl.innerHTML = `
+                    <div class="flex flex-col items-center text-center py-8 relative z-10 animate-slide-up">
+                        <div class="w-20 h-20 bg-tertiary/10 border border-tertiary/30 rounded-full flex items-center justify-center mb-6 relative">
+                            <span class="absolute inset-0 rounded-full bg-tertiary/20 animate-ping opacity-75"></span>
+                            <span class="material-symbols-outlined text-tertiary text-5xl relative z-10">rocket_launch</span>
+                        </div>
+                        <h3 class="font-headline-lg text-3xl text-white mb-4">Application Received!</h3>
+                        <p class="font-body-lg text-on-surface-variant max-w-lg mb-8 leading-relaxed">
+                            Thank you, <strong class="text-tertiary">${name}</strong>. Your talent profile has been securely added to our evaluation queue. We will review your portfolio at <a class="text-primary hover:underline font-semibold" href="${portfolio}" target="_blank">${portfolio}</a> and reach out to you at <strong class="text-primary">${email}</strong> within 3-5 business days.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+                            <a href="index.html" class="bg-gradient-to-r from-primary-container to-tertiary-container text-white font-bold px-8 py-3 rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined text-sm">home</span>
+                                Return to Home Page
+                            </a>
+                        </div>
+                    </div>
+                `;
+            } else {
+                throw new Error('Server responded with an error');
+            }
+        })
+        .catch(err => {
+            console.error('Submission error:', err);
+            // Fallback to mailto if network / server fails
+            const subject = encodeURIComponent('New Roster Application: ' + name + ' — ' + role);
+            const body = encodeURIComponent(
+                '=========================================\r\n' +
+                'DHIA STUDIO — TALENT ACQUISITION FUNNEL\r\n' +
+                '=========================================\r\n\r\n' +
+                'APPLICANT PROFILE:\r\n' +
+                '- Talent Name: ' + name + '\r\n' +
+                '- Contact Email: ' + email + '\r\n' +
+                '- Designated Core Competency: ' + role + '\r\n\r\n' +
+                'TECHNICAL STACK & MASTERY:\r\n' +
+                '- Confirmed Software Mastery: ' + software + '\r\n\r\n' +
+                'CREATIVE EVIDENCE:\r\n' +
+                '- Secure Portfolio Link: ' + portfolio + '\r\n\r\n' +
+                'ABOUT THE APPLICANT:\r\n' +
+                '"' + about + '"\r\n\r\n' +
+                '=========================================\r\n' +
+                'ACTION REQUIRED: Review the portfolio hyperlink, verify software proficiencies match active project queues, and tag the applicant inside the master agency production roster if approved.'
+            );
+            window.location.href = 'mailto:dhiastudio.agency@gmail.com?subject=' + subject + '&body=' + body;
+
+            // Reset button state
+            btn.disabled = false;
+            btn.innerHTML = originalHTML;
+        });
+    }
+</script>
+</body></html>
