@@ -362,121 +362,169 @@
   </div>
   <div class="video-grid">
 
-    <!-- Video 1 -->
+    <!-- Video 1: Reach Final -->
     <div class="group relative overflow-hidden rounded-2xl glass-card shadow-lg" style="aspect-ratio:9/16">
-      <video class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" autoplay muted loop playsinline>
-        <source src="videos/reach%201%20final.mp4" type="video/mp4">
+      <video id="vid1" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" muted loop playsinline preload="metadata">
+        <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321761/reach_1_final_qsqai9.mp4" type="video/mp4">
       </video>
       <div class="absolute inset-0 bg-gradient-to-t from-[#050507]/90 via-[#050507]/20 to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-20"></div>
       <div class="absolute inset-0 flex flex-col justify-end p-5 pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
-        <span class="w-fit bg-[#8B5CF6]/20 text-[#8B5CF6] px-3 py-1 rounded-full text-[10px] font-bold mb-3 uppercase tracking-widest border border-[#8B5CF6]/30 backdrop-blur-md">Showcase</span>
-        <h3 class="text-white font-bold text-lg drop-shadow-md" style="font-family:Montserrat,sans-serif">Reach Final</h3>
+        <span class="w-fit bg-[#8B5CF6]/20 text-[#8B5CF6] px-3 py-1 rounded-full text-[10px] font-bold mb-3 uppercase tracking-widest border border-[#8B5CF6]/30 backdrop-blur-md">Career</span>
+        <h3 class="text-white font-bold text-lg drop-shadow-md" style="font-family:Montserrat,sans-serif">Quit Your Job?</h3>
+        <p class="text-white/60 text-xs mt-1">How to know if it's time to leave.</p>
       </div>
       <div class="video-controls absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 gap-2">
-        <button onclick="const v=this.closest('[style]').querySelector('video');if(v.paused){v.play();this.querySelector('span').innerText='pause';}else{v.pause();this.querySelector('span').innerText='play_arrow';}" class="w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Play/Pause">
-          <span class="material-symbols-outlined text-base">pause</span>
+        <button data-vid="vid1" data-action="playpause" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Play/Pause">
+          <span class="material-symbols-outlined text-base">play_arrow</span>
         </button>
-        <button onclick="const v=this.closest('[style]').querySelector('video');v.muted=!v.muted;this.querySelector('span').innerText=v.muted?'volume_off':'volume_up';" class="w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Mute/Unmute">
+        <button data-vid="vid1" data-action="mute" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Mute/Unmute">
           <span class="material-symbols-outlined text-base">volume_off</span>
         </button>
       </div>
     </div>
 
-    <!-- Video 2 -->
+    <!-- Video 2: Advice Show -->
     <div class="group relative overflow-hidden rounded-2xl glass-card shadow-lg" style="aspect-ratio:9/16">
-      <video class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" autoplay muted loop playsinline>
-        <source src="videos/Day%201%20show.mp4" type="video/mp4">
+      <video id="vid2" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" muted loop playsinline preload="metadata">
+        <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779322705/Advice_1_Show_bu7n6d.mp4#t=1.6" type="video/mp4">
       </video>
       <div class="absolute inset-0 bg-gradient-to-t from-[#050507]/90 via-transparent to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-20"></div>
       <div class="absolute inset-0 flex flex-col justify-end p-4 pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
-        <span class="w-fit bg-[#06B6D4]/20 text-[#06B6D4] px-3 py-1 rounded-full text-[10px] font-bold mb-2 uppercase tracking-widest border border-[#06B6D4]/30 backdrop-blur-md">Event</span>
-        <h3 class="text-white font-semibold text-base drop-shadow-md">Day 1 Show</h3>
+        <span class="w-fit bg-[#06B6D4]/20 text-[#06B6D4] px-3 py-1 rounded-full text-[10px] font-bold mb-2 uppercase tracking-widest border border-[#06B6D4]/30 backdrop-blur-md">Mindset</span>
+        <h3 class="text-white font-semibold text-base drop-shadow-md">Life Advice</h3>
+        <p class="text-white/60 text-xs mt-1">Essential lessons for personal growth.</p>
       </div>
       <div class="video-controls absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 gap-2">
-        <button onclick="const v=this.closest('[style]').querySelector('video');if(v.paused){v.play();this.querySelector('span').innerText='pause';}else{v.pause();this.querySelector('span').innerText='play_arrow';}" class="w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20">
-          <span class="material-symbols-outlined text-base">pause</span>
+        <button data-vid="vid2" data-action="playpause" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Play/Pause">
+          <span class="material-symbols-outlined text-base">play_arrow</span>
         </button>
-        <button onclick="const v=this.closest('[style]').querySelector('video');v.muted=!v.muted;this.querySelector('span').innerText=v.muted?'volume_off':'volume_up';" class="w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20">
+        <button data-vid="vid2" data-action="mute" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Mute/Unmute">
           <span class="material-symbols-outlined text-base">volume_off</span>
         </button>
       </div>
     </div>
 
-    <!-- Video 3 -->
+    <!-- Video 3: Motion Design Edit -->
     <div class="group relative overflow-hidden rounded-2xl glass-card shadow-lg" style="aspect-ratio:9/16">
-      <video class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" autoplay muted loop playsinline>
-        <source src="videos/Day%202%20show.mp4" type="video/mp4">
+      <video id="vid3" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" muted loop playsinline preload="metadata">
+        <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321753/%D9%85%D9%88%D9%86%D8%AA%D8%A7%D8%AC_%D9%81%D9%8A%D8%AF%D9%8A%D9%88_%D8%AC%D8%AF%D9%8A%D8%AF_New_edit_video..Edit_by_yasser_video_editor.._edit_editing_dz_motiondes_nud2pp.mp4#t=1.2" type="video/mp4">
       </video>
       <div class="absolute inset-0 bg-gradient-to-t from-[#050507]/90 via-transparent to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-20"></div>
       <div class="absolute inset-0 flex flex-col justify-end p-4 pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
-        <span class="w-fit bg-[#a1a1aa]/20 text-[#a1a1aa] px-3 py-1 rounded-full text-[10px] font-bold mb-2 uppercase tracking-widest border border-[#a1a1aa]/30 backdrop-blur-md">Event</span>
-        <h3 class="text-white font-semibold text-base drop-shadow-md">Day 2 Show</h3>
+        <span class="w-fit bg-[#8B5CF6]/20 text-[#8B5CF6] px-3 py-1 rounded-full text-[10px] font-bold mb-2 uppercase tracking-widest border border-[#8B5CF6]/30 backdrop-blur-md">Marketing</span>
+        <h3 class="text-white font-semibold text-base drop-shadow-md">Digital Marketing Strategy</h3>
+        <p class="text-white/60 text-xs mt-1">Modern tactics to scale your brand.</p>
       </div>
       <div class="video-controls absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 gap-2">
-        <button onclick="const v=this.closest('[style]').querySelector('video');if(v.paused){v.play();this.querySelector('span').innerText='pause';}else{v.pause();this.querySelector('span').innerText='play_arrow';}" class="w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20">
-          <span class="material-symbols-outlined text-base">pause</span>
+        <button data-vid="vid3" data-action="playpause" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Play/Pause">
+          <span class="material-symbols-outlined text-base">play_arrow</span>
         </button>
-        <button onclick="const v=this.closest('[style]').querySelector('video');v.muted=!v.muted;this.querySelector('span').innerText=v.muted?'volume_off':'volume_up';" class="w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20">
+        <button data-vid="vid3" data-action="mute" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Mute/Unmute">
           <span class="material-symbols-outlined text-base">volume_off</span>
         </button>
       </div>
     </div>
 
-    <!-- Video 4 -->
+    <!-- Video 4: Day 1 Show -->
     <div class="group relative overflow-hidden rounded-2xl glass-card shadow-lg" style="aspect-ratio:9/16">
-      <video class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" autoplay muted loop playsinline>
-        <source src="videos/oussami%20final%203.mp4" type="video/mp4">
+      <video id="vid4" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" muted loop playsinline preload="metadata">
+        <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321749/Day_1_show_ekxlxo.mp4#t=1" type="video/mp4">
       </video>
       <div class="absolute inset-0 bg-gradient-to-t from-[#050507]/90 via-[#050507]/20 to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-20"></div>
       <div class="absolute inset-0 flex flex-col justify-end p-5 pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
-        <span class="w-fit bg-[#8B5CF6]/20 text-[#8B5CF6] px-3 py-1 rounded-full text-[10px] font-bold mb-3 uppercase tracking-widest border border-[#8B5CF6]/30 backdrop-blur-md">Highlight</span>
-        <h3 class="text-white font-bold text-lg drop-shadow-md" style="font-family:Montserrat,sans-serif">Oussami Final</h3>
+        <span class="w-fit bg-[#06B6D4]/20 text-[#06B6D4] px-3 py-1 rounded-full text-[10px] font-bold mb-3 uppercase tracking-widest border border-[#06B6D4]/30 backdrop-blur-md">Concept</span>
+        <h3 class="text-white font-bold text-lg drop-shadow-md" style="font-family:Montserrat,sans-serif">Time Mastery</h3>
+        <p class="text-white/60 text-xs mt-1">Managing your hours effectively.</p>
       </div>
       <div class="video-controls absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 gap-2">
-        <button onclick="const v=this.closest('[style]').querySelector('video');if(v.paused){v.play();this.querySelector('span').innerText='pause';}else{v.pause();this.querySelector('span').innerText='play_arrow';}" class="w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20">
-          <span class="material-symbols-outlined text-base">pause</span>
+        <button data-vid="vid4" data-action="playpause" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Play/Pause">
+          <span class="material-symbols-outlined text-base">play_arrow</span>
         </button>
-        <button onclick="const v=this.closest('[style]').querySelector('video');v.muted=!v.muted;this.querySelector('span').innerText=v.muted?'volume_off':'volume_up';" class="w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20">
+        <button data-vid="vid4" data-action="mute" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Mute/Unmute">
           <span class="material-symbols-outlined text-base">volume_off</span>
         </button>
       </div>
     </div>
 
-    <!-- Video 5 -->
+    <!-- Video 5: Ecommerce Edit -->
     <div class="group relative overflow-hidden rounded-2xl glass-card shadow-lg" style="aspect-ratio:9/16">
-      <video class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" autoplay muted loop playsinline>
-        <source src="videos/port%201.mp4" type="video/mp4">
+      <video id="vid5" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" muted loop playsinline preload="metadata">
+        <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321753/%D9%85%D9%88%D9%86%D8%AA%D8%A7%D8%AC_%D9%81%D9%8A%D8%AF%D9%8A%D9%88_%D8%AC%D8%AF%D9%8A%D8%AF_New_video_edit_..Edit_by_yasser_video_editor.._edit_editing_ecommerce_dz_mjakr0.mp4#t=2" type="video/mp4">
       </video>
       <div class="absolute inset-0 bg-gradient-to-t from-[#050507]/90 via-transparent to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-20"></div>
       <div class="absolute inset-0 flex flex-col justify-end p-4 pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
-        <span class="w-fit bg-[#06B6D4]/20 text-[#06B6D4] px-3 py-1 rounded-full text-[10px] font-bold mb-2 uppercase tracking-widest border border-[#06B6D4]/30 backdrop-blur-md">Portfolio</span>
-        <h3 class="text-white font-semibold text-base drop-shadow-md">Port 1</h3>
+        <span class="w-fit bg-[#06B6D4]/20 text-[#06B6D4] px-3 py-1 rounded-full text-[10px] font-bold mb-2 uppercase tracking-widest border border-[#06B6D4]/30 backdrop-blur-md">Business</span>
+        <h3 class="text-white font-semibold text-base drop-shadow-md">Step-by-step blueprint to launch a store.</h3>
+        <p class="text-white/60 text-xs mt-1">E-commerce product video edit</p>
       </div>
       <div class="video-controls absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 gap-2">
-        <button onclick="const v=this.closest('[style]').querySelector('video');if(v.paused){v.play();this.querySelector('span').innerText='pause';}else{v.pause();this.querySelector('span').innerText='play_arrow';}" class="w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20">
-          <span class="material-symbols-outlined text-base">pause</span>
+        <button data-vid="vid5" data-action="playpause" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Play/Pause">
+          <span class="material-symbols-outlined text-base">play_arrow</span>
         </button>
-        <button onclick="const v=this.closest('[style]').querySelector('video');v.muted=!v.muted;this.querySelector('span').innerText=v.muted?'volume_off':'volume_up';" class="w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20">
+        <button data-vid="vid5" data-action="mute" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Mute/Unmute">
           <span class="material-symbols-outlined text-base">volume_off</span>
         </button>
       </div>
     </div>
 
-    <!-- Video 6 -->
+    <!-- Video 6: Port 2 -->
     <div class="group relative overflow-hidden rounded-2xl glass-card shadow-lg" style="aspect-ratio:9/16">
-      <video class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" autoplay muted loop playsinline>
-        <source src="videos/port%202.mp4" type="video/mp4">
+      <video id="vid6" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" muted loop playsinline preload="metadata">
+        <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321753/port_2_aufn2l.mp4#t=3.1" type="video/mp4">
       </video>
       <div class="absolute inset-0 bg-gradient-to-t from-[#050507]/90 via-transparent to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-20"></div>
       <div class="absolute inset-0 flex flex-col justify-end p-4 pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
-        <span class="w-fit bg-[#a1a1aa]/20 text-[#a1a1aa] px-3 py-1 rounded-full text-[10px] font-bold mb-2 uppercase tracking-widest border border-[#a1a1aa]/30 backdrop-blur-md">Portfolio</span>
-        <h3 class="text-white font-semibold text-base drop-shadow-md">Port 2</h3>
+        <span class="w-fit  text-[#a1a1aa] px-3 py-1 rounded-full text-[10px] font-bold mb-2 uppercase tracking-widest border border-[#a1a1aa]/30 backdrop-blur-md">Growth</span>
+        <h3 class="text-white font-semibold text-base drop-shadow-md">Core Advice</h3>
+        <p class="text-white/60 text-xs mt-1">Strategic insights for success.</p>
       </div>
       <div class="video-controls absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 gap-2">
-        <button onclick="const v=this.closest('[style]').querySelector('video');if(v.paused){v.play();this.querySelector('span').innerText='pause';}else{v.pause();this.querySelector('span').innerText='play_arrow';}" class="w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20">
-          <span class="material-symbols-outlined text-base">pause</span>
+        <button data-vid="vid6" data-action="playpause" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Play/Pause">
+          <span class="material-symbols-outlined text-base">play_arrow</span>
         </button>
-        <button onclick="const v=this.closest('[style]').querySelector('video');v.muted=!v.muted;this.querySelector('span').innerText=v.muted?'volume_off':'volume_up';" class="w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20">
+        <button data-vid="vid6" data-action="mute" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Mute/Unmute">
+          <span class="material-symbols-outlined text-base">volume_off</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Video 7: Oussami Final 3 -->
+    <div class="group relative overflow-hidden rounded-2xl glass-card shadow-lg" style="aspect-ratio:9/16">
+      <video id="vid7" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" muted loop playsinline preload="metadata">
+        <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321750/port_1_a7nvhy.mp4#t=4" type="video/mp4">
+      </video>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#050507]/90 via-transparent to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-20"></div>
+      <div class="absolute inset-0 flex flex-col justify-end p-4 pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
+        <span class="w-fit bg-[#8B5CF6]/20 text-[#8B5CF6] px-3 py-1 rounded-full text-[10px] font-bold mb-2 uppercase tracking-widest border border-[#8B5CF6]/30 backdrop-blur-md">Narrative</span>
+        <h3 class="text-white font-semibold text-base drop-shadow-md">Story Power</h3>
+        <p class="text-white/60 text-xs mt-1">How to craft compelling narratives.</p>
+      </div>
+      <div class="video-controls absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 gap-2">
+        <button data-vid="vid7" data-action="playpause" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Play/Pause">
+          <span class="material-symbols-outlined text-base">play_arrow</span>
+        </button>
+        <button data-vid="vid7" data-action="mute" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Mute/Unmute">
+          <span class="material-symbols-outlined text-base">volume_off</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Video 8: Day 2 Show -->
+    <div class="group relative overflow-hidden rounded-2xl glass-card shadow-lg" style="aspect-ratio:9/16">
+      <video id="vid8" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" muted loop playsinline preload="metadata">
+        <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321749/Day_2_show_vvjbwn.mp4#t=2" type="video/mp4">
+      </video>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#050507]/90 via-transparent to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-20"></div>
+      <div class="absolute inset-0 flex flex-col justify-end p-4 pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
+        <span class="w-fit bg-[#06B6D4]/20 text-[#06B6D4] px-3 py-1 rounded-full text-[10px] font-bold mb-2 uppercase tracking-widest border border-[#06B6D4]/30 backdrop-blur-md">Cinematic</span>
+        <h3 class="text-white font-semibold text-base drop-shadow-md">Apple Style</h3>
+        <p class="text-white/60 text-xs mt-1">Clean and premium editing aesthetics.</p>
+      </div>
+      <div class="video-controls absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 gap-2">
+        <button data-vid="vid8" data-action="playpause" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Play/Pause">
+          <span class="material-symbols-outlined text-base">play_arrow</span>
+        </button>
+        <button data-vid="vid8" data-action="mute" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Mute/Unmute">
           <span class="material-symbols-outlined text-base">volume_off</span>
         </button>
       </div>
@@ -734,7 +782,7 @@
         <span class="material-symbols-outlined text-[#8B5CF6] group-hover:scale-110 transition-transform text-lg">mail</span>
         <span>Email</span>
       </a>
-      <a href="#" class="px-5 py-3.5 bg-white/5 border border-white/20 text-white font-bold rounded-lg hover:bg-white/10 hover:border-[#06B6D4]/50 transition-all duration-300 backdrop-blur-sm flex items-center justify-center gap-2 group text-sm">
+      <!-- <a href="#" class="px-5 py-3.5 bg-white/5 border border-white/20 text-white font-bold rounded-lg hover:bg-white/10 hover:border-[#06B6D4]/50 transition-all duration-300 backdrop-blur-sm flex items-center justify-center gap-2 group text-sm">
         <svg class="w-5 h-5 fill-[#06B6D4] group-hover:scale-110 transition-transform flex-shrink-0" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
         <span>Instagram</span>
       </a>
@@ -745,7 +793,7 @@
       <a href="#" class="px-5 py-3.5 bg-white/5 border border-white/20 text-white font-bold rounded-lg hover:bg-white/10 hover:border-[#8B5CF6]/50 transition-all duration-300 backdrop-blur-sm flex items-center justify-center gap-2 group text-sm">
         <svg class="w-5 h-5 fill-[#8B5CF6] group-hover:scale-110 transition-transform flex-shrink-0" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         <span>LinkedIn</span>
-      </a>
+      </a> -->
     </div>
   </div>
 </section>
@@ -760,9 +808,9 @@
     </div>
     <div class="footer-links">
       <a class="text-xs text-[#a1a1aa] hover:text-[#8B5CF6] transition-colors" href="mailto:dhiastudio.agency@gmail.com">Email</a>
-      <a class="text-xs text-[#a1a1aa] hover:text-[#06B6D4] transition-colors" href="#">Instagram</a>
+      <!-- <a class="text-xs text-[#a1a1aa] hover:text-[#06B6D4] transition-colors" href="#">Instagram</a>
       <a class="text-xs text-[#a1a1aa] hover:text-[#a1a1aa] transition-colors" href="#">TikTok</a>
-      <a class="text-xs text-[#a1a1aa] hover:text-[#8B5CF6] transition-colors" href="#">LinkedIn</a>
+      <a class="text-xs text-[#a1a1aa] hover:text-[#8B5CF6] transition-colors" href="#">LinkedIn</a> -->
     </div>
   </div>
 </footer>
@@ -815,14 +863,14 @@
     if (heroImg) heroImg.style.transform = `translateY(${scrolled * 0.15}px) scale(1.1)`;
   }, { passive: true });
 
-  // Fix video button selectors (use closest with aspect-ratio)
-  document.querySelectorAll('.video-controls button').forEach(btn => {
-    btn.addEventListener('click', function() {
-      const card = this.closest('[style*="aspect-ratio"]');
-      const v = card ? card.querySelector('video') : null;
+  // Video controls via data attributes — reliable play/pause & mute
+  document.querySelectorAll('.vid-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const v = document.getElementById(this.dataset.vid);
       if (!v) return;
       const icon = this.querySelector('span');
-      if (this.title === 'Play/Pause') {
+      if (this.dataset.action === 'playpause') {
         if (v.paused) { v.play(); icon.innerText = 'pause'; }
         else { v.pause(); icon.innerText = 'play_arrow'; }
       } else {
