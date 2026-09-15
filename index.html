@@ -1211,55 +1211,81 @@
     btn.disabled = true;
     btn.innerHTML = `<span class="relative z-10 flex items-center justify-center gap-2"><svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>Sending your inquiry...</span>`;
 
-    // Send to Web3Forms / Node server
-    fetch('https://api.web3forms.com/submit', {
+    // Try submitting to backend API first, then Web3Forms, then mailto
+    const payload = {
+      name: name,
+      email: email,
+      company: company || 'N/A',
+      video_link: videoLink || 'N/A',
+      projectType: editingType,
+      volume: volume,
+      message: message || 'N/A'
+    };
+
+    fetch('/api/client-inquiry', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        access_key: 'e89cb276-a31d-4701-8cc8-fc52013ef37e',
-        subject: `New Project Inquiry from ${name} — Dhia Studio`,
-        from_name: 'Dhia Studio Portfolio',
-        'Client Name': name,
-        'Email Address': email,
-        'Channel / Company': company || 'N/A',
-        'Content Link': videoLink || 'N/A',
-        'Editing Needed': editingType,
-        'Project Volume': volume,
-        'Message / Details': message || 'N/A'
-      })
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
     })
-    .then(response => {
-      if (response.ok) {
-        const formEl = document.getElementById('client-form');
-        formEl.innerHTML = `
-          <div class="flex flex-col items-center text-center py-6 animate-slide-up">
-            <div class="w-16 h-16 bg-[#8B5CF6]/15 border border-[#8B5CF6]/30 rounded-full flex items-center justify-center mb-4 text-[#8B5CF6]">
-              <span class="material-symbols-outlined text-4xl">check_circle</span>
-            </div>
-            <h3 class="text-2xl font-bold text-white mb-2 font-heading">Project Inquiry Received!</h3>
-            <p class="text-zinc-400 text-sm max-w-md mb-6 leading-relaxed">
-              Thanks <strong class="text-white">${name}</strong>. I will review your details and email you at <strong class="text-[#06B6D4]">${email}</strong> with a suggested editing direction.
-            </p>
-            <button onclick="location.reload()" class="px-6 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition-all">
-              Send another message
-            </button>
-          </div>
-        `;
-      } else {
-        throw new Error('API submission failed');
-      }
+    .then(res => {
+      if (res.ok) return res.json();
+      throw new Error('Local API unavailable');
+    })
+    .then(() => showSuccess(name, email))
+    .catch(() => {
+      // Fallback to Web3Forms
+      return fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          access_key: 'e89cb276-a31d-4701-8cc8-fc52013ef37e',
+          subject: `New Project Inquiry from ${name} — Dhia Studio`,
+          from_name: 'Dhia Studio Portfolio',
+          'Client Name': name,
+          'Email Address': email,
+          'Channel / Company': company || 'N/A',
+          'Content Link': videoLink || 'N/A',
+          'Editing Needed': editingType,
+          'Project Volume': volume,
+          'Message / Details': message || 'N/A'
+        })
+      })
+      .then(response => {
+        if (response.ok) {
+          showSuccess(name, email);
+        } else {
+          throw new Error('Web3Forms failed');
+        }
+      });
     })
     .catch(() => {
-      // Direct mailto fallback if endpoint fails
+      // Direct mailto fallback
       const subject = encodeURIComponent(`Project Inquiry: ${name}`);
       const body = encodeURIComponent(
         `Name: ${name}\nEmail: ${email}\nCompany/Channel: ${company}\nContent Link: ${videoLink}\nEditing Needed: ${editingType}\nVolume: ${volume}\n\nMessage:\n${message}`
       );
       window.location.href = `mailto:dhiaeddine.editor@gmail.com?subject=${subject}&body=${body}`;
-      
       btn.disabled = false;
       btn.innerHTML = originalBtnContent;
     });
+
+    function showSuccess(clientName, clientEmail) {
+      const formEl = document.getElementById('client-form');
+      formEl.innerHTML = `
+        <div class="flex flex-col items-center text-center py-6 animate-slide-up">
+          <div class="w-16 h-16 bg-[#8B5CF6]/15 border border-[#8B5CF6]/30 rounded-full flex items-center justify-center mb-4 text-[#8B5CF6]">
+            <span class="material-symbols-outlined text-4xl">check_circle</span>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-2 font-heading">Project Inquiry Received!</h3>
+          <p class="text-zinc-400 text-sm max-w-md mb-6 leading-relaxed">
+            Thanks <strong class="text-white">${clientName}</strong>. I will review your details and email you at <strong class="text-[#06B6D4]">${clientEmail}</strong> with a suggested editing direction.
+          </p>
+          <button onclick="location.reload()" class="px-6 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition-all">
+            Send another message
+          </button>
+        </div>
+      `;
+    }
 
     return false;
   }
