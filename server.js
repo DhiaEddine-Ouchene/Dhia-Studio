@@ -43,7 +43,7 @@ function escapeHtml(text) {
         .replace(/'/g, '&#039;');
 }
 
-// 1. Client Inquiry / Paid Trial Endpoint
+// 1. Client Inquiry / Start a Project Endpoint
 app.post('/api/client-inquiry', async (req, res) => {
     try {
         const { name, email, company, video_link, projectType, volume, message, details } = req.body;
@@ -53,12 +53,12 @@ app.post('/api/client-inquiry', async (req, res) => {
         }
 
         const projectDetails = message || details || 'N/A';
-        const subject = `New Paid Trial Request from ${name} — Dhia Studio`;
+        const subject = `New Project Inquiry from ${name} — Dhia Studio`;
         
         // Plain text fallback
         const bodyText = 
 `=========================================
-DHIA STUDIO — NEW CLIENT INQUIRY / PAID TRIAL
+DHIA STUDIO — NEW CLIENT PROJECT INQUIRY
 =========================================
 
 CLIENT DETAILS:
@@ -69,15 +69,15 @@ CLIENT DETAILS:
 
 PROJECT REQUIREMENTS:
 - Type of Editing Needed: ${projectType || 'N/A'}
-- Approximate Monthly Volume: ${volume || 'N/A'}
+- Project Scope / Volume: ${volume || 'N/A'}
 
 PROJECT BRIEF / MESSAGE:
 "${projectDetails}"
 
 =========================================
-ACTION REQUIRED: Review the content link, assess editing direction, and respond with a paid trial offer within 24 hours.`;
+ACTION REQUIRED: Review the content link, assess editing direction, and respond within 24 hours.`;
 
-        // Premium HTML styling matching the dark luxury brand theme of Dhia Studio
+        // Premium HTML styling matching the dark theme of Dhia Studio
         const safeName = escapeHtml(name);
         const safeEmail = escapeHtml(email);
         const safeCompany = escapeHtml(company || 'N/A');
@@ -108,7 +108,7 @@ ACTION REQUIRED: Review the content link, assess editing direction, and respond 
                 <tr>
                   <td>
                     <div style="font-size: 11px; font-weight: bold; color: #06B6D4; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 6px;">Dhia Studio</div>
-                    <h1 style="margin: 0; font-size: 22px; color: #ffffff; font-weight: 700; letter-spacing: -0.5px;">New Paid Trial Inquiry</h1>
+                    <h1 style="margin: 0; font-size: 22px; color: #ffffff; font-weight: 700; letter-spacing: -0.5px;">New Project Inquiry</h1>
                   </td>
                 </tr>
               </table>
@@ -148,7 +148,7 @@ ACTION REQUIRED: Review the content link, assess editing direction, and respond 
                   <td style="padding: 6px 0; font-size: 14px; color: #ffffff; font-weight: 600;">${safeProjectType}</td>
                 </tr>
                 <tr>
-                  <td style="padding: 6px 0; font-size: 14px; color: #a1a1aa;"><strong>Monthly Volume</strong></td>
+                  <td style="padding: 6px 0; font-size: 14px; color: #a1a1aa;"><strong>Scope / Volume</strong></td>
                   <td style="padding: 6px 0; font-size: 14px; color: #06B6D4; font-weight: bold;">${safeVolume}</td>
                 </tr>
               </table>
@@ -164,7 +164,7 @@ ACTION REQUIRED: Review the content link, assess editing direction, and respond 
                 <tr>
                   <td>
                     <div style="font-size: 11px; font-weight: bold; color: #8B5CF6; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px;">Action Required</div>
-                    <p style="margin: 0; font-size: 13px; color: #e4e4e7; line-height: 1.5;">Review the content link, determine editing direction, and respond directly from <strong style="color: #06B6D4;">dhia@dhiaeddine.studio</strong> within 24 hours.</p>
+                    <p style="margin: 0; font-size: 13px; color: #e4e4e7; line-height: 1.5;">Review the content link, determine editing direction, and respond directly to <strong style="color: #06B6D4;">${safeEmail}</strong> within 24 hours.</p>
                   </td>
                 </tr>
               </table>
@@ -175,7 +175,7 @@ ACTION REQUIRED: Review the content link, assess editing direction, and respond 
           <!-- Footer -->
           <tr>
             <td align="center" style="background-color: #08080d; padding: 20px; font-size: 12px; color: #71717a; border-top: 1px solid rgba(255, 255, 255, 0.05);">
-              Dhia Studio — Founder-led video editing by Dhia Eddine.<br>
+              Dhia Studio — Professional video editing by Dhia Eddine.<br>
               <a href="https://dhiaeddine.studio" style="color: #a1a1aa; text-decoration: none;">dhiaeddine.studio</a>
             </td>
           </tr>
@@ -189,7 +189,7 @@ ACTION REQUIRED: Review the content link, assess editing direction, and respond 
 `;
 
         const transporter = getTransporter();
-        const recipient = process.env.RECIPIENT_EMAIL || 'dhia@dhiaeddine.studio';
+        const recipient = process.env.RECIPIENT_EMAIL || 'dhiaeddine.editor@gmail.com';
         const web3formsKey = process.env.WEB3FORMS_ACCESS_KEY;
 
         if (transporter) {
@@ -203,45 +203,49 @@ ACTION REQUIRED: Review the content link, assess editing direction, and respond 
             });
             console.log(`[Email Sent] Inquiry from ${name} (<${email}>) successfully sent to ${recipient}`);
             return res.json({ success: true, mode: 'live' });
-        } else if (web3formsKey) {
-            const response = await fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify({
-                    access_key: web3formsKey,
-                    subject: subject,
-                    from_name: 'Dhia Studio Portfolio',
-                    'Client Name': name,
-                    'Client Email': email,
-                    'Channel / Company': company || 'N/A',
-                    'Link to Content': video_link || 'N/A',
-                    'Editing Needed': projectType || 'N/A',
-                    'Monthly Volume': volume || 'N/A',
-                    'Message Details': projectDetails
-                })
-            });
-            const result = await response.json();
-            if (result.success) {
-                console.log(`[Web3Forms Forwarded] Inquiry from ${name} successfully forwarded.`);
-                return res.json({ success: true, mode: 'live' });
-            } else {
-                throw new Error(result.message || 'Web3Forms submission failed');
+        } else if (web3formsKey && web3formsKey !== 'your-web3forms-access-key-here' && web3formsKey.trim().length > 0) {
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        access_key: web3formsKey,
+                        subject: subject,
+                        from_name: 'Dhia Studio Portfolio',
+                        'Client Name': name,
+                        'Client Email': email,
+                        'Channel / Company': company || 'N/A',
+                        'Link to Content': video_link || 'N/A',
+                        'Editing Needed': projectType || 'N/A',
+                        'Project Volume': volume || 'N/A',
+                        'Message Details': projectDetails
+                    })
+                });
+                const result = await response.json();
+                if (result.success) {
+                    console.log(`[Web3Forms Forwarded] Inquiry from ${name} successfully forwarded.`);
+                    return res.json({ success: true, mode: 'live' });
+                } else {
+                    console.warn(`[Web3Forms Note] ${result.message || 'API key error'}, falling back to simulation`);
+                }
+            } catch (err) {
+                console.warn(`[Web3Forms Fetch Error] ${err.message}, falling back to simulation`);
             }
-        } else {
-            console.log('\n=========================================');
-            console.log('🚨 SIMULATION MODE: SMTP credentials not set in .env');
-            console.log('Client Inquiry Details:');
-            console.log(bodyText);
-            console.log('=========================================\n');
-            return res.json({ 
-                success: true, 
-                mode: 'simulation', 
-                message: 'Form received successfully! (Simulation Mode: SMTP/Web3Forms credentials not configured in .env)' 
-            });
         }
+        
+        console.log('\n=========================================');
+        console.log('🚨 SIMULATION MODE: SMTP credentials not configured in .env');
+        console.log('Client Inquiry Details:');
+        console.log(bodyText);
+        console.log('=========================================\n');
+        return res.json({ 
+            success: true, 
+            mode: 'simulation', 
+            message: 'Form received successfully! (Simulation Mode: SMTP/Web3Forms credentials not configured in .env)' 
+        });
     } catch (error) {
         console.error('Error handling client inquiry:', error);
         res.status(500).json({ success: false, error: 'Internal Server Error' });

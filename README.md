@@ -1,11 +1,13 @@
-# Dhia Studio — Founder-led Video Editing Portfolio
+# Dhia Studio — Professional Video Editing Portfolio
 
-Personal portfolio website for **Dhia Eddine Ouchene** (Founder & Solo Video Editor at **Dhia Studio**).
+Portfolio website for **Dhia Eddine** (Video Editor & Founder at **Dhia Studio**).
 
-Positioned for educational creators, coaches, consultants, personal brands, and YouTubers looking for retention-focused video editing and paid trial collaborations.
+Positioned for educational creators, coaches, consultants, personal brands, and YouTubers looking for retention-focused video editing.
 
 - **Domain:** [dhiaeddine.studio](https://dhiaeddine.studio)
-- **Contact:** [dhia@dhiaeddine.studio](mailto:dhia@dhiaeddine.studio)
+- **Contact:** [dhiaeddine.editor@gmail.com](mailto:dhiaeddine.editor@gmail.com)
+- **Instagram:** [instagram.com/dhiastudio.agency](https://www.instagram.com/dhiastudio.agency)
+- **TikTok:** [tiktok.com/@dhia_studio](https://www.tiktok.com/@dhia_studio)
 
 ---
 
@@ -40,10 +42,10 @@ The contact form supports dual delivery methods:
 2. **Node.js Express + SMTP:**
    - Copy `.env.example` to `.env`.
    - Add your SMTP credentials (e.g. Gmail App Password).
-   - Inbound inquiries will be formatted and mailed to `dhia@dhiaeddine.studio`.
+   - Inbound inquiries will be formatted and mailed to `dhiaeddine.editor@gmail.com`.
 
 3. **Mailto Fallback:**
-   - If network or API delivery fails, the form automatically launches the client's default mail client with pre-filled fields directed to `dhia@dhiaeddine.studio`.
+   - If network or API delivery fails, the form automatically launches the client's default mail client with pre-filled fields directed to `dhiaeddine.editor@gmail.com`.
 
 ---
 

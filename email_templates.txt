@@ -3,7 +3,7 @@ DHIA STUDIO — CLIENT INQUIRY EMAIL TEMPLATE
 =========================================
 
 [EMAIL SUBJECT LINE]
-New Paid Trial Request from {{Client Full Name}} — Dhia Studio
+New Project Inquiry from {{Client Full Name}} — Dhia Studio
 
 [EMAIL BODY LAYOUT]
 =========================================
@@ -18,10 +18,10 @@ CLIENT INFORMATION:
 
 PROJECT PARAMETERS:
 - Type of Editing Needed: {{Type of Editing Needed}}
-- Approximate Monthly Volume: {{Monthly Video Volume}}
+- Project Scope / Volume: {{Project Volume}}
 
 PROJECT BRIEF & GOALS:
 "{{Message Details}}"
 
 =========================================
-ACTION REQUIRED: Review the content link, assess editing direction, and respond directly from dhia@dhiaeddine.studio within 24 hours.
+ACTION REQUIRED: Review the content link, assess editing direction, and respond directly to client within 24 hours.
