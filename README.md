@@ -52,7 +52,8 @@ The contact form supports dual delivery methods:
 ```
 Dhia Studio/
 ├── assets/
-│   └── logo.png               # Brand icon & logo mark
+│   ├── logo.png               # Brand icon & logo mark
+│   └── dhia-portrait.jpg      # Founder portrait photo (Dhia Eddine)
 ├── index.html                 # Main single-page portfolio
 ├── editors.html               # Redirect to main portfolio
 ├── server.js                  # Express backend & email handler
