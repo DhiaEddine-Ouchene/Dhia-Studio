@@ -1,140 +1,241 @@
-<!DOCTYPE html><html class="dark" lang="en"><head>
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Geist:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- SEO Primary Meta Tags -->
+<title>Dhia Eddine | Video Editor for Creators</title>
+<meta name="title" content="Dhia Eddine | Video Editor for Creators">
+<meta name="description" content="Video editor helping educational creators, coaches, and personal brands produce engaging YouTube videos and short-form content. Founder-led video editing through Dhia Studio.">
+<meta name="author" content="Dhia Eddine Ouchene">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://dhiaeddine.studio">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dhiaeddine.studio">
+<meta property="og:title" content="Dhia Eddine — Video Editor">
+<meta property="og:description" content="YouTube editing, short-form content, and video repurposing through Dhia Studio.">
+<meta property="og:image" content="https://dhiaeddine.studio/assets/og-image.jpg">
+<!-- Recommended OG Image: assets/og-image.jpg (1200x630px) -->
+
+<!-- Twitter / X -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://dhiaeddine.studio">
+<meta property="twitter:title" content="Dhia Eddine — Video Editor">
+<meta property="twitter:description" content="YouTube editing, short-form content, and video repurposing through Dhia Studio.">
+<meta property="twitter:image" content="https://dhiaeddine.studio/assets/og-image.jpg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="./assets/logo.png">
+
+<!-- Fonts & Icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png"  href="./assets/logo.png">
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<!-- Structured Data (Schema.org JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://dhiaeddine.studio/#dhia",
+      "name": "Dhia Eddine Ouchene",
+      "alternateName": "Dhia Eddine",
+      "jobTitle": "Video Editor & Founder",
+      "url": "https://dhiaeddine.studio",
+      "email": "mailto:dhia@dhiaeddine.studio",
+      "sameAs": [
+        "https://www.instagram.com/dhiaeddine",
+        "https://www.tiktok.com/@dhiaeddine"
+      ],
+      "knowsAbout": ["Video Editing", "YouTube Growth", "Motion Graphics", "Content Repurposing", "Color Grading", "Sound Design"],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Dhia Studio",
+        "url": "https://dhiaeddine.studio"
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://dhiaeddine.studio/#business",
+      "name": "Dhia Studio",
+      "url": "https://dhiaeddine.studio",
+      "logo": "https://dhiaeddine.studio/assets/logo.png",
+      "image": "https://dhiaeddine.studio/assets/og-image.jpg",
+      "description": "Founder-led video editing studio by Dhia Eddine helping educational creators, coaches, and personal brands produce engaging YouTube videos and short-form content.",
+      "founder": {
+        "@id": "https://dhiaeddine.studio/#dhia"
+      },
+      "email": "dhia@dhiaeddine.studio",
+      "areaServed": "Worldwide",
+      "priceRange": "$$"
+    }
+  ]
+}
+</script>
+
 <style>
   *, *::before, *::after { box-sizing: border-box; }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: #050507;
     color: #ffffff;
+    font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     overflow-x: hidden;
     margin: 0;
   }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* Glass Card & Neon Glow */
   .glass-card {
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.025);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.08);
-    transition: all 0.4s cubic-bezier(0.16,1,0.3,1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .glass-card:hover {
-    border-color: rgba(139,92,246,0.3);
-    box-shadow: 0 20px 40px -15px rgba(139,92,246,0.15), 0 0 50px -10px rgba(6,182,212,0.1);
+    border-color: rgba(139, 92, 246, 0.35);
+    box-shadow: 0 20px 40px -15px rgba(139, 92, 246, 0.18), 0 0 50px -10px rgba(6, 182, 212, 0.12);
     transform: translateY(-4px);
   }
-  .neon-glow-purple { box-shadow: 0 0 40px rgba(139,92,246,0.15); }
+
+  .glass-pill {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .neon-glow-purple { box-shadow: 0 0 40px rgba(139, 92, 246, 0.15); }
+
   .gradient-text {
-    background: linear-gradient(135deg,#ffffff 10%,#8B5CF6 50%,#06B6D4 100%);
+    background: linear-gradient(135deg, #ffffff 10%, #8B5CF6 55%, #06B6D4 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
   .hero-overlay {
-    background: radial-gradient(circle at 50% 50%,rgba(139,92,246,0.05) 0%,#050507 90%);
+    background: radial-gradient(circle at 50% 30%, rgba(139, 92, 246, 0.08) 0%, rgba(6, 182, 212, 0.03) 45%, #050507 90%);
   }
+
+  /* Custom Scrollbar */
   .custom-scrollbar::-webkit-scrollbar { width: 8px; }
   .custom-scrollbar::-webkit-scrollbar-track { background: #050507; }
-  .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 10px; }
-  .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(139,92,246,0.3); }
-  .service-card:hover {
-    border-color: rgba(6,182,212,0.4);
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px -15px rgba(6,182,212,0.2);
-  }
+  .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.12); border-radius: 10px; }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(139, 92, 246, 0.4); }
+
+  /* Keyframe Animations */
   @keyframes float {
-    0%,100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
   }
   .floating { animation: float 6s ease-in-out infinite; }
-  @keyframes slideUp {
-    from { opacity:0; transform:translateY(20px); }
-    to { opacity:1; transform:translateY(0); }
+
+  @keyframes pulseGlow {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.05); }
   }
-  .animate-slide-up { animation: slideUp 0.6s cubic-bezier(0.16,1,0.3,1) forwards; }
+  .pulse-glow { animation: pulseGlow 4s ease-in-out infinite; }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-slide-up { animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+  /* Focus States for Accessibility */
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid #8B5CF6;
+    outline-offset: 3px;
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 
   /* Mobile menu */
   #mobile-menu {
     display: none;
     flex-direction: column;
-    gap: 0;
-    background: rgba(5,5,7,0.97);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    padding: 0.5rem 0 1rem;
+    background: rgba(5, 5, 7, 0.98);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0 1.5rem;
   }
   #mobile-menu.open { display: flex; }
   #mobile-menu a {
-    padding: 0.85rem 1.5rem;
-    font-size: 0.95rem;
+    padding: 0.9rem 1.75rem;
+    font-size: 1rem;
     font-weight: 600;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     transition: color 0.2s, background 0.2s;
   }
-  #mobile-menu a:hover { color: #8B5CF6; background: rgba(139,92,246,0.05); }
+  #mobile-menu a:hover, #mobile-menu a:focus {
+    color: #8B5CF6;
+    background: rgba(139, 92, 246, 0.06);
+  }
   #mobile-menu .menu-cta {
-    margin: 0.75rem 1.5rem 0;
+    margin: 1rem 1.75rem 0;
     text-align: center;
-    background: linear-gradient(to right,#8B5CF6,#06B6D4);
+    background: linear-gradient(135deg, #8B5CF6, #06B6D4);
     border-radius: 0.75rem;
     color: #fff !important;
     font-weight: 700;
     border-bottom: none;
+    padding: 0.85rem;
   }
 
-  /* Hero headline responsive */
+  /* Typography Scales */
   .hero-headline {
-    font-size: clamp(2rem, 7vw, 4rem);
+    font-size: clamp(2.2rem, 6.5vw, 4.25rem);
     font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    font-family: Montserrat, sans-serif;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
   }
   .hero-sub {
-    font-size: clamp(1rem, 2.5vw, 1.125rem);
-    line-height: 1.6;
+    font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+    line-height: 1.65;
   }
-
-  /* Section headline */
   .sec-headline {
-    font-size: clamp(1.75rem, 5vw, 3rem);
-    font-weight: 700;
+    font-size: clamp(1.85rem, 4.5vw, 3rem);
+    font-weight: 800;
     line-height: 1.2;
-    letter-spacing: -0.01em;
-    font-family: Montserrat, sans-serif;
+    letter-spacing: -0.015em;
   }
 
-  /* Video grid */
-  .video-grid {
+  /* Video Grid */
+  .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
-    gap: 1.25rem;
-  }
-  @media (max-width: 640px) {
-    .video-grid {
-      grid-template-columns: 1fr;
-    }
+    grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+    gap: 1.75rem;
   }
 
-  /* Services grid */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
-    gap: 1.5rem;
-  }
-
-  /* Testimonials grid */
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
-    gap: 1.25rem;
-  }
-
-  /* About grid */
+  /* About Grid */
   .about-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -142,807 +243,1147 @@
     align-items: center;
   }
   @media (min-width: 1024px) {
-    .about-grid { grid-template-columns: 1fr 1fr; }
+    .about-grid { grid-template-columns: 1fr 1.2fr; }
   }
 
-  /* About stats */
-  .stats-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-top: 0.75rem;
-  }
-
-  /* Contact form grids */
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-  @media (min-width: 640px) {
-    .form-row { grid-template-columns: 1fr 1fr; }
-  }
-
-  /* Social links wrap */
-  .socials-wrap {
+  /* Hamburger Toggle */
+  #hamburger {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+    flex-direction: column;
     justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+    background: transparent;
+    border: none;
   }
-  .socials-wrap a {
-    flex: 1 1 auto;
-    min-width: 130px;
-    max-width: 180px;
+  #hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  @media (max-width: 480px) {
-    .socials-wrap a { min-width: 100%; max-width: 100%; }
-  }
-
-  /* Footer */
-  .footer-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.25rem;
-    text-align: center;
-  }
-  @media (min-width: 768px) {
-    .footer-inner { flex-direction: row; justify-content: space-between; text-align: left; }
-  }
-  .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
-
-  /* Nav CTA button - hide Join as Editor on small screens */
-  .nav-join { display: none; }
-  @media (min-width: 640px) { .nav-join { display: inline-flex; } }
-
-  /* Hire Us always visible */
-  .nav-hire { display: inline-flex; }
-
-  /* Hero buttons */
-  .hero-btns {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    align-items: center;
-    width: 100%;
-  }
-  @media (min-width: 480px) {
-    .hero-btns { flex-direction: row; justify-content: center; width: auto; }
-  }
-  .hero-btns a {
-    width: 100%;
-  }
-  @media (min-width: 480px) {
-    .hero-btns a { width: auto; }
-  }
-
-  /* Overflow safety */
-  img, video, iframe { max-width: 100%; }
-
-  /* Hamburger */
-  #hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
-  #hamburger span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: all 0.3s; }
   #hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   #hamburger.open span:nth-child(2) { opacity: 0; }
   #hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   @media (min-width: 768px) { #hamburger { display: none; } }
 
-  /* Video card controls always accessible on touch */
+  /* Touch controls always visible */
   @media (hover: none) {
     .video-controls { opacity: 1 !important; }
   }
 </style>
+
 <script id="tailwind-config">
   tailwind.config = {
     darkMode: "class",
     theme: {
       extend: {
         colors: {
-          "tertiary-container": "#06B6D4",
           "primary": "#8B5CF6",
-          "surface-bright": "#121214",
-          "primary-container": "#8B5CF6",
-          "on-tertiary-container": "#ffffff",
-          "secondary-fixed": "#27272a",
-          "tertiary": "#06B6D4",
-          "on-background": "#ffffff",
-          "surface-container-lowest": "#020203",
-          "error": "#ef4444",
-          "on-error": "#ffffff",
-          "on-tertiary": "#ffffff",
           "secondary": "#a1a1aa",
-          "on-secondary": "#18181b",
-          "on-surface-variant": "#a1a1aa",
+          "tertiary": "#06B6D4",
           "surface": "#050507",
-          "surface-container-low": "#0a0a0c",
-          "background": "#050507",
-          "surface-variant": "#0c0c0e",
-          "secondary-container": "rgba(255,255,255,0.04)",
-          "outline": "rgba(255,255,255,0.2)",
-          "on-primary-container": "#ffffff",
-          "on-secondary-container": "#ffffff",
-          "surface-container-highest": "#18181b",
-          "surface-container-high": "#0f0f12",
-          "on-surface": "#ffffff",
-          "on-primary": "#ffffff",
-          "surface-dim": "#050507",
-          "surface-container": "rgba(255,255,255,0.02)",
-          "outline-variant": "rgba(255,255,255,0.1)"
+          "surface-card": "#0c0c10",
+          "surface-alt": "#0a0a0d"
         }
       }
     }
   }
 </script>
 </head>
+
 <body class="custom-scrollbar">
 
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/[0.02] backdrop-blur-xl border-b border-white/10 transition-all duration-300">
-  <div class="flex justify-between items-center px-4 sm:px-6 md:px-12 h-16 sm:h-20 max-w-7xl mx-auto">
-    <a href="#" class="flex items-center gap-2 sm:gap-3 group flex-shrink-0">
-      <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#06B6D4] p-[1.5px] flex items-center justify-center shadow-lg shadow-[#8B5CF6]/20 transition-transform duration-500 group-hover:rotate-[360deg]">
-        <img src="./assets/logo.png" class="w-full block rounded-full" alt="Dhia Studio logo">
-      </div>
-      <span class="font-bold tracking-wider text-white text-sm sm:text-base" style="font-family:Montserrat,sans-serif">DHIA STUDIO</span>
-    </a>
-
-    <!-- Desktop nav -->
-    <div class="hidden md:flex items-center gap-6 lg:gap-8">
-      <a class="text-white font-semibold text-sm hover:text-[#8B5CF6] transition-colors" href="#portfolio">Our Work</a>
-      <a class="text-zinc-400 font-medium text-sm hover:text-[#06B6D4] transition-colors" href="#services">Services</a>
-      <a class="text-zinc-400 font-medium text-sm hover:text-[#8B5CF6] transition-colors" href="#about">About</a>
-      <!-- <a class="text-zinc-400 font-medium text-sm hover:text-[#06B6D4] transition-colors" href="#testimonials">Testimonials</a> -->
-      <a class="text-zinc-400 font-medium text-sm hover:text-[#8B5CF6] transition-colors" href="#contact">Contact</a>
-    </div>
-
-    <div class="flex items-center gap-2 sm:gap-3">
-      <a href="#contact" class="nav-hire bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] text-white px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs font-bold hover:scale-105 transition-all duration-300 shadow-lg shadow-[#8B5CF6]/20 items-center gap-2 group relative overflow-hidden">
-        <span class="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-500"></span>
-        <span class="relative z-10">Hire Us</span>
-      </a>
-      <a href="editors.html" class="nav-join bg-white/[0.03] border border-white/10 text-white px-4 py-2.5 rounded-xl text-xs font-bold hover:bg-white/10 transition-all duration-300 items-center gap-2 group">
-        <span>Join as Editor</span>
-        <span class="material-symbols-outlined text-[14px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-      </a>
-      <!-- Hamburger -->
-      <button id="hamburger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-
-  <!-- Mobile menu -->
-  <div id="mobile-menu" role="navigation" aria-label="Mobile menu">
-    <a href="#portfolio" class="mobile-link">Our Work</a>
-    <a href="#services" class="mobile-link">Services</a>
-    <a href="#about" class="mobile-link">About</a>
-    <!-- <a href="#testimonials" class="mobile-link">Testimonials</a> -->
-    <a href="#contact" class="mobile-link">Contact</a>
-    <a href="editors.html" class="mobile-link">Join as Editor</a>
-    <a href="#contact" class="menu-cta mobile-link">Hire Us</a>
-  </div>
-</nav>
-
-<main>
-<!-- Hero Section -->
-<section class="relative min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 overflow-hidden pt-16 sm:pt-20">
-  <div class="absolute inset-0 z-0">
-    <div class="absolute inset-0 hero-overlay z-10"></div>
-    <img class="w-full h-full object-cover grayscale opacity-20 scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJZ59XV8KxzpjuMIWopfeWjiTTBbDh-GziUnd5bmPshT1WHZFFvC6ld4mJNOrYIbvg8ByEpMoDjYqrqP9tdx551YVYyrwPJCg1NJng88ZBIWCINj5FpDLESE0Crrsg1DCJqWKwS2Af99oVIxsPuODE7V8tkuKD4KJMeWm16_tH979go0BQJJeZHNlYdyl-LLAA-oVRxjSMKUjkPFI8GzoDoMco4_nzgZpqHqMu04b2tT0JW7FDO932vlvoNOwTC1rTHf9KWFrMGg" alt="Studio background">
-  </div>
-  <div class="relative z-20 max-w-5xl px-2 sm:px-4">
-    <span class="inline-block px-4 py-1.5 rounded-full bg-[#8B5CF6]/10 text-[#8B5CF6] border border-[#8B5CF6]/20 text-xs font-bold mb-5 sm:mb-6 tracking-widest uppercase" style="font-family:Geist,sans-serif">Pioneering Visual Narrative</span>
-    <h1 class="hero-headline mb-5 sm:mb-6">
-      <span class="gradient-text">Cinematic Production Excellence.</span>
-    </h1>
-    <p class="hero-sub text-[#a1a1aa] mb-8 sm:mb-10 max-w-2xl mx-auto">
-      We redefine raw footage into breathtaking visual narratives. From high-energy motion graphics to precision-engineered color grading, we bring elite cinematic quality to your screens.
-    </p>
-    <div class="hero-btns">
-      <a href="#contact" class="px-8 py-3.5 sm:py-4 bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] text-white font-bold rounded-lg shadow-2xl shadow-[#8B5CF6]/30 hover:scale-105 transition-all duration-300 relative overflow-hidden group inline-flex justify-center items-center text-sm sm:text-base">
-        <span class="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-500"></span>
-        <span class="relative z-10">Start Your Project</span>
-      </a>
-      <a href="#portfolio" class="px-8 py-3.5 sm:py-4 bg-white/5 backdrop-blur-sm border border-white/20 text-white font-bold rounded-lg hover:bg-white/10 hover:border-[#8B5CF6]/50 transition-all duration-300 inline-flex justify-center items-center text-sm sm:text-base">
-        View Showreel
-      </a>
-    </div>
-  </div>
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-40">
-    <span class="material-symbols-outlined text-3xl">keyboard_double_arrow_down</span>
-  </div>
-</section>
-
-<!-- Portfolio Section -->
-<section class="py-16 sm:py-20 px-4 sm:px-6 max-w-7xl mx-auto" id="portfolio">
-  <div class="mb-10 sm:mb-14 text-center sm:text-left">
-    <span class="text-xs font-bold text-[#06B6D4] uppercase tracking-widest" style="font-family:Geist,sans-serif">The Archive</span>
-    <h2 class="sec-headline mt-1 mb-3">Selected Works</h2>
-    <p class="text-[#a1a1aa] max-w-2xl text-base leading-relaxed">A curated collection of cinematic narratives, combining high-energy pacing, advanced motion design, and precision color grading.</p>
-  </div>
-  <div class="video-grid">
-
-    <!-- Video 1: Reach Final -->
-    <div class="group relative overflow-hidden rounded-2xl glass-card shadow-lg" style="aspect-ratio:9/16">
-      <video id="vid1" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" muted loop playsinline preload="metadata">
-        <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321761/reach_1_final_qsqai9.mp4" type="video/mp4">
-      </video>
-      <div class="absolute inset-0 bg-gradient-to-t from-[#050507]/90 via-[#050507]/20 to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-20"></div>
-      <div class="absolute inset-0 flex flex-col justify-end p-5 pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
-        <span class="w-fit bg-[#8B5CF6]/20 text-[#8B5CF6] px-3 py-1 rounded-full text-[10px] font-bold mb-3 uppercase tracking-widest border border-[#8B5CF6]/30 backdrop-blur-md">Career</span>
-        <h3 class="text-white font-bold text-lg drop-shadow-md" style="font-family:Montserrat,sans-serif">Quit Your Job?</h3>
-        <p class="text-white/60 text-xs mt-1">How to know if it's time to leave.</p>
-      </div>
-      <div class="video-controls absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 gap-2">
-        <button data-vid="vid1" data-action="playpause" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Play/Pause">
-          <span class="material-symbols-outlined text-base">play_arrow</span>
-        </button>
-        <button data-vid="vid1" data-action="mute" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Mute/Unmute">
-          <span class="material-symbols-outlined text-base">volume_off</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Video 9: SaaS -->
-    <div class="group relative overflow-hidden rounded-2xl glass-card shadow-lg" style="aspect-ratio:9/16">
-      <video id="vid9" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" muted loop playsinline preload="metadata">
-        <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1780937212/Horisontal_Show_kzurv2.mp4#t=1" type="video/mp4">
-      </video>
-      <div class="absolute inset-0 bg-gradient-to-t from-[#050507]/90 via-[#050507]/20 to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-20"></div>
-      <div class="absolute inset-0 flex flex-col justify-end p-5 pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
-        <span class="w-fit bg-[#8B5CF6]/20 text-[#8B5CF6] px-3 py-1 rounded-full text-[10px] font-bold mb-3 uppercase tracking-widest border border-[#8B5CF6]/30 backdrop-blur-md">AI</span>
-        <h3 class="text-white font-semibold text-lg drop-shadow-md" style="font-family:Montserrat,sans-serif">Make Money with claude</h3>
-        <p class="text-white/60 text-xs mt-1">5 ways to make money with claude</p>
-      </div>
-      <div class="video-controls absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 gap-2">
-        <button data-vid="vid9" data-action="playpause" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Play/Pause">
-          <span class="material-symbols-outlined text-base">play_arrow</span>
-        </button>
-        <button data-vid="vid9" data-action="mute" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Mute/Unmute">
-          <span class="material-symbols-outlined text-base">volume_off</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Video 2: Advice Show -->
-    <div class="group relative overflow-hidden rounded-2xl glass-card shadow-lg" style="aspect-ratio:9/16">
-      <video id="vid2" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" muted loop playsinline preload="metadata">
-        <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779322705/Advice_1_Show_bu7n6d.mp4#t=1.6" type="video/mp4">
-      </video>
-      <div class="absolute inset-0 bg-gradient-to-t from-[#050507]/90 via-transparent to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-20"></div>
-      <div class="absolute inset-0 flex flex-col justify-end p-4 pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
-        <span class="w-fit bg-[#06B6D4]/20 text-[#06B6D4] px-3 py-1 rounded-full text-[10px] font-bold mb-2 uppercase tracking-widest border border-[#06B6D4]/30 backdrop-blur-md">Mindset</span>
-        <h3 class="text-white font-semibold text-base drop-shadow-md">Life Advice</h3>
-        <p class="text-white/60 text-xs mt-1">Essential lessons for personal growth.</p>
-      </div>
-      <div class="video-controls absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 gap-2">
-        <button data-vid="vid2" data-action="playpause" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Play/Pause">
-          <span class="material-symbols-outlined text-base">play_arrow</span>
-        </button>
-        <button data-vid="vid2" data-action="mute" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Mute/Unmute">
-          <span class="material-symbols-outlined text-base">volume_off</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Video 3: Motion Design Edit -->
-    <div class="group relative overflow-hidden rounded-2xl glass-card shadow-lg" style="aspect-ratio:9/16">
-      <video id="vid3" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" muted loop playsinline preload="metadata">
-        <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321753/%D9%85%D9%88%D9%86%D8%AA%D8%A7%D8%AC_%D9%81%D9%8A%D8%AF%D9%8A%D9%88_%D8%AC%D8%AF%D9%8A%D8%AF_New_edit_video..Edit_by_yasser_video_editor.._edit_editing_dz_motiondes_nud2pp.mp4#t=1.2" type="video/mp4">
-      </video>
-      <div class="absolute inset-0 bg-gradient-to-t from-[#050507]/90 via-transparent to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-20"></div>
-      <div class="absolute inset-0 flex flex-col justify-end p-4 pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
-        <span class="w-fit bg-[#8B5CF6]/20 text-[#8B5CF6] px-3 py-1 rounded-full text-[10px] font-bold mb-2 uppercase tracking-widest border border-[#8B5CF6]/30 backdrop-blur-md">Marketing</span>
-        <h3 class="text-white font-semibold text-base drop-shadow-md">Digital Marketing Strategy</h3>
-        <p class="text-white/60 text-xs mt-1">Modern tactics to scale your brand.</p>
-      </div>
-      <div class="video-controls absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 gap-2">
-        <button data-vid="vid3" data-action="playpause" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Play/Pause">
-          <span class="material-symbols-outlined text-base">play_arrow</span>
-        </button>
-        <button data-vid="vid3" data-action="mute" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Mute/Unmute">
-          <span class="material-symbols-outlined text-base">volume_off</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Video 4: Day 1 Show -->
-    <div class="group relative overflow-hidden rounded-2xl glass-card shadow-lg" style="aspect-ratio:9/16">
-      <video id="vid4" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" muted loop playsinline preload="metadata">
-        <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321749/Day_1_show_ekxlxo.mp4#t=1" type="video/mp4">
-      </video>
-      <div class="absolute inset-0 bg-gradient-to-t from-[#050507]/90 via-[#050507]/20 to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-20"></div>
-      <div class="absolute inset-0 flex flex-col justify-end p-5 pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
-        <span class="w-fit bg-[#06B6D4]/20 text-[#06B6D4] px-3 py-1 rounded-full text-[10px] font-bold mb-3 uppercase tracking-widest border border-[#06B6D4]/30 backdrop-blur-md">Concept</span>
-        <h3 class="text-white font-bold text-lg drop-shadow-md" style="font-family:Montserrat,sans-serif">Time Mastery</h3>
-        <p class="text-white/60 text-xs mt-1">Managing your hours effectively.</p>
-      </div>
-      <div class="video-controls absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 gap-2">
-        <button data-vid="vid4" data-action="playpause" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Play/Pause">
-          <span class="material-symbols-outlined text-base">play_arrow</span>
-        </button>
-        <button data-vid="vid4" data-action="mute" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Mute/Unmute">
-          <span class="material-symbols-outlined text-base">volume_off</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Video 5: Ecommerce Edit -->
-    <div class="group relative overflow-hidden rounded-2xl glass-card shadow-lg" style="aspect-ratio:9/16">
-      <video id="vid5" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" muted loop playsinline preload="metadata">
-        <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321753/%D9%85%D9%88%D9%86%D8%AA%D8%A7%D8%AC_%D9%81%D9%8A%D8%AF%D9%8A%D9%88_%D8%AC%D8%AF%D9%8A%D8%AF_New_video_edit_..Edit_by_yasser_video_editor.._edit_editing_ecommerce_dz_mjakr0.mp4#t=2" type="video/mp4">
-      </video>
-      <div class="absolute inset-0 bg-gradient-to-t from-[#050507]/90 via-transparent to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-20"></div>
-      <div class="absolute inset-0 flex flex-col justify-end p-4 pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
-        <span class="w-fit bg-[#06B6D4]/20 text-[#06B6D4] px-3 py-1 rounded-full text-[10px] font-bold mb-2 uppercase tracking-widest border border-[#06B6D4]/30 backdrop-blur-md">Business</span>
-        <h3 class="text-white font-semibold text-base drop-shadow-md">Step-by-step blueprint to launch a store.</h3>
-        <p class="text-white/60 text-xs mt-1">E-commerce product video edit</p>
-      </div>
-      <div class="video-controls absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 gap-2">
-        <button data-vid="vid5" data-action="playpause" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Play/Pause">
-          <span class="material-symbols-outlined text-base">play_arrow</span>
-        </button>
-        <button data-vid="vid5" data-action="mute" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Mute/Unmute">
-          <span class="material-symbols-outlined text-base">volume_off</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Video 6: Port 2 -->
-    <div class="group relative overflow-hidden rounded-2xl glass-card shadow-lg" style="aspect-ratio:9/16">
-      <video id="vid6" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" muted loop playsinline preload="metadata">
-        <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321753/port_2_aufn2l.mp4#t=3.1" type="video/mp4">
-      </video>
-      <div class="absolute inset-0 bg-gradient-to-t from-[#050507]/90 via-transparent to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-20"></div>
-      <div class="absolute inset-0 flex flex-col justify-end p-4 pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
-        <span class="w-fit  text-[#a1a1aa] px-3 py-1 rounded-full text-[10px] font-bold mb-2 uppercase tracking-widest border border-[#a1a1aa]/30 backdrop-blur-md">Growth</span>
-        <h3 class="text-white font-semibold text-base drop-shadow-md">Core Advice</h3>
-        <p class="text-white/60 text-xs mt-1">Strategic insights for success.</p>
-      </div>
-      <div class="video-controls absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 gap-2">
-        <button data-vid="vid6" data-action="playpause" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Play/Pause">
-          <span class="material-symbols-outlined text-base">play_arrow</span>
-        </button>
-        <button data-vid="vid6" data-action="mute" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Mute/Unmute">
-          <span class="material-symbols-outlined text-base">volume_off</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Video 7: Oussami Final 3 -->
-    <div class="group relative overflow-hidden rounded-2xl glass-card shadow-lg" style="aspect-ratio:9/16">
-      <video id="vid7" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" muted loop playsinline preload="metadata">
-        <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321750/port_1_a7nvhy.mp4#t=4" type="video/mp4">
-      </video>
-      <div class="absolute inset-0 bg-gradient-to-t from-[#050507]/90 via-transparent to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-20"></div>
-      <div class="absolute inset-0 flex flex-col justify-end p-4 pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
-        <span class="w-fit bg-[#8B5CF6]/20 text-[#8B5CF6] px-3 py-1 rounded-full text-[10px] font-bold mb-2 uppercase tracking-widest border border-[#8B5CF6]/30 backdrop-blur-md">Narrative</span>
-        <h3 class="text-white font-semibold text-base drop-shadow-md">Story Power</h3>
-        <p class="text-white/60 text-xs mt-1">How to craft compelling narratives.</p>
-      </div>
-      <div class="video-controls absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 gap-2">
-        <button data-vid="vid7" data-action="playpause" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Play/Pause">
-          <span class="material-symbols-outlined text-base">play_arrow</span>
-        </button>
-        <button data-vid="vid7" data-action="mute" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Mute/Unmute">
-          <span class="material-symbols-outlined text-base">volume_off</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Video 8: Day 2 Show -->
-    <div class="group relative overflow-hidden rounded-2xl glass-card shadow-lg" style="aspect-ratio:9/16">
-      <video id="vid8" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" muted loop playsinline preload="metadata">
-        <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321749/Day_2_show_vvjbwn.mp4#t=2" type="video/mp4">
-      </video>
-      <div class="absolute inset-0 bg-gradient-to-t from-[#050507]/90 via-transparent to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-20"></div>
-      <div class="absolute inset-0 flex flex-col justify-end p-4 pointer-events-none transition-opacity duration-500 group-hover:opacity-0">
-        <span class="w-fit bg-[#06B6D4]/20 text-[#06B6D4] px-3 py-1 rounded-full text-[10px] font-bold mb-2 uppercase tracking-widest border border-[#06B6D4]/30 backdrop-blur-md">Cinematic</span>
-        <h3 class="text-white font-semibold text-base drop-shadow-md">Apple Style</h3>
-        <p class="text-white/60 text-xs mt-1">Clean and premium editing aesthetics.</p>
-      </div>
-      <div class="video-controls absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4 gap-2">
-        <button data-vid="vid8" data-action="playpause" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Play/Pause">
-          <span class="material-symbols-outlined text-base">play_arrow</span>
-        </button>
-        <button data-vid="vid8" data-action="mute" class="vid-btn w-11 h-11 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center hover:bg-black/80 transition-colors text-white border border-white/20 z-20" title="Mute/Unmute">
-          <span class="material-symbols-outlined text-base">volume_off</span>
-        </button>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- About Me Section -->
-<section class="py-16 sm:py-20 bg-[#0a0a0c] overflow-hidden" id="about">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="about-grid">
-      <div class="relative">
-        <div class="absolute -top-10 -left-10 w-40 h-40 bg-[#8B5CF6]/20 rounded-full blur-3xl opacity-50 floating"></div>
-        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-[#06B6D4]/20 rounded-full blur-3xl opacity-50 floating" style="animation-delay:-2s"></div>
-        <div class="relative z-10 rounded-2xl overflow-hidden glass-card p-2">
-          <img class="w-full object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700" style="height:clamp(280px,50vw,500px)" src="./assets/logo.png" alt="Founder portrait">
+<!-- Header & Navigation -->
+<header>
+  <nav class="fixed top-0 w-full z-50 bg-[#050507]/85 backdrop-blur-xl border-b border-white/10 transition-all duration-300" aria-label="Main Navigation">
+    <div class="flex justify-between items-center px-4 sm:px-6 md:px-12 h-16 sm:h-20 max-w-7xl mx-auto">
+      
+      <!-- Brand Logo & Descriptor -->
+      <a href="#" class="flex items-center gap-2.5 sm:gap-3 group flex-shrink-0" aria-label="Dhia Studio Homepage">
+        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#06B6D4] p-[1.5px] flex items-center justify-center shadow-lg shadow-[#8B5CF6]/25 transition-transform duration-500 group-hover:scale-105">
+          <img src="./assets/logo.png" class="w-full h-full object-cover rounded-full" alt="Dhia Studio logo" width="44" height="44">
         </div>
-      </div>
-      <div class="flex flex-col gap-4 sm:gap-5">
-        <span class="text-xs font-bold text-[#8B5CF6] uppercase tracking-widest" style="font-family:Geist,sans-serif">The Vision</span>
-        <h2 class="sec-headline">Beyond the Timeline.</h2>
-        <div class="text-[#a1a1aa] text-base leading-relaxed flex flex-col gap-4">
-          <p>Dhia Studio was founded with a singular mission: to bridge the gap between technical precision and emotional storytelling. We don't just edit video; we curate experiences.</p>
-          <p>Led by a team of elite creators with backgrounds in luxury automotive, high-fashion, and experimental VFX, we bring a cinematic eye to every frame. Our philosophy is rooted in the belief that every pixel should serve the narrative.</p>
-          <p>Whether it's a 15-second social spot or a feature-length documentary, we apply the same level of obsessive detail that has defined our reputation in the industry.</p>
+        <div class="flex flex-col">
+          <span class="font-extrabold tracking-wider text-white text-sm sm:text-base font-heading">DHIA STUDIO</span>
+          <span class="text-[10px] text-[#a1a1aa] tracking-tight font-medium -mt-0.5">By Dhia Eddine</span>
         </div>
-        <div class="stats-grid">
-          <div>
-            <!-- <div class="text-3xl font-bold text-[#8B5CF6]" style="font-family:Montserrat,sans-serif">150+</div>
-            <div class="text-xs text-[#a1a1aa] uppercase tracking-tight mt-1">Projects Delivered</div> -->
-          </div>
-          <div>
-            <!-- <div class="text-3xl font-bold text-[#06B6D4]" style="font-family:Montserrat,sans-serif">12+</div>
-            <div class="text-xs text-[#a1a1aa] uppercase tracking-tight mt-1">Awards Won</div> -->
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hidden md:flex items-center gap-7 lg:gap-9">
+        <a class="text-zinc-300 font-semibold text-sm hover:text-[#8B5CF6] transition-colors focus:text-[#8B5CF6]" href="#work">Work</a>
+        <a class="text-zinc-400 font-medium text-sm hover:text-[#06B6D4] transition-colors focus:text-[#06B6D4]" href="#services">Services</a>
+        <a class="text-zinc-400 font-medium text-sm hover:text-[#8B5CF6] transition-colors focus:text-[#8B5CF6]" href="#about">About</a>
+        <a class="text-zinc-400 font-medium text-sm hover:text-[#06B6D4] transition-colors focus:text-[#06B6D4]" href="#process">Process</a>
+        <a class="text-zinc-400 font-medium text-sm hover:text-[#8B5CF6] transition-colors focus:text-[#8B5CF6]" href="#contact">Contact</a>
+      </div>
+
+      <!-- Header CTA & Mobile Hamburger -->
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] text-white px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold hover:scale-105 transition-all duration-300 shadow-lg shadow-[#8B5CF6]/25 inline-flex items-center gap-1.5 group relative overflow-hidden">
+          <span class="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-500"></span>
+          <span class="relative z-10">Start a paid trial</span>
+          <span class="material-symbols-outlined text-sm relative z-10 group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+        </a>
+
+        <!-- Hamburger Button -->
+        <button id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" role="menu" aria-label="Mobile Navigation">
+      <a href="#work" class="mobile-link" role="menuitem">Work</a>
+      <a href="#services" class="mobile-link" role="menuitem">Services</a>
+      <a href="#about" class="mobile-link" role="menuitem">About</a>
+      <a href="#process" class="mobile-link" role="menuitem">Process</a>
+      <a href="#contact" class="mobile-link" role="menuitem">Contact</a>
+      <a href="#contact" class="menu-cta mobile-link" role="menuitem">Start a paid trial</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+
+  <!-- 1. Personal Hero Section -->
+  <section class="relative min-h-[92vh] flex flex-col justify-center items-center text-center px-4 sm:px-6 overflow-hidden pt-24 sm:pt-28 pb-16">
+    <!-- Atmospheric Background Overlay -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+      <div class="absolute inset-0 hero-overlay z-10"></div>
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-[#8B5CF6]/15 to-[#06B6D4]/10 rounded-full blur-3xl pulse-glow"></div>
+      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#8B5CF6_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    </div>
+
+    <div class="relative z-20 max-w-4xl mx-auto px-2 sm:px-4 flex flex-col items-center">
+      
+      <!-- Founder-led Positioning Pill -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-pill text-xs font-semibold mb-6 border border-[#8B5CF6]/30 text-zinc-200">
+        <span class="w-2 h-2 rounded-full bg-[#06B6D4] animate-ping"></span>
+        <span>Founder-led Studio • Work Directly with Dhia</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="hero-headline mb-6 text-white">
+        Video editing that <span class="gradient-text">keeps viewers watching.</span>
+      </h1>
+
+      <!-- Supporting Subparagraph -->
+      <p class="hero-sub text-[#a1a1aa] mb-8 max-w-2xl mx-auto font-normal">
+        I’m Dhia, a video editor helping educational creators, coaches, and personal brands transform raw recordings into engaging YouTube videos and short-form content.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md mb-8">
+        <a href="#work" class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] text-white font-bold rounded-xl shadow-xl shadow-[#8B5CF6]/25 hover:scale-105 transition-all duration-300 inline-flex justify-center items-center gap-2 group relative overflow-hidden text-sm sm:text-base">
+          <span class="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-500"></span>
+          <span class="material-symbols-outlined text-lg">play_circle</span>
+          <span class="relative z-10">Watch my work</span>
+        </a>
+        
+        <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 bg-white/[0.04] backdrop-blur-md border border-white/20 text-white font-bold rounded-xl hover:bg-white/10 hover:border-[#8B5CF6]/60 transition-all duration-300 inline-flex justify-center items-center text-sm sm:text-base">
+          Start a paid trial
+        </a>
+      </div>
+
+      <!-- Remote Trust Line -->
+      <div class="flex items-center gap-2 text-xs sm:text-sm text-zinc-400 font-medium">
+        <span class="material-symbols-outlined text-[#06B6D4] text-base">public</span>
+        <span>Available for remote projects in the USA, Canada, Europe, and worldwide.</span>
+      </div>
+
+      <!-- Dhia Portrait Spot / Visual Anchor -->
+      <div class="mt-10 sm:mt-12 relative flex flex-col items-center">
+        <div class="relative group">
+          <div class="absolute -inset-1 rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] opacity-50 blur group-hover:opacity-100 transition duration-500"></div>
+          <!-- 
+            PORTRAIT SPECIFICATIONS:
+            Filename: assets/dhia-portrait.jpg (or .png / .webp)
+            Recommended Dimensions: 400x400px (1:1 square) or 800x1000px (4:5)
+            Current Fallback: Dhia Studio emblem with founder role badge
+          -->
+          <div class="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-white/30 bg-[#0c0c12] p-1 flex items-center justify-center">
+            <img src="./assets/logo.png" alt="Dhia Eddine - Video Editor & Founder" class="w-full h-full object-cover rounded-full" width="96" height="96">
           </div>
         </div>
+        <span class="text-xs text-zinc-400 font-semibold mt-2.5">Dhia Eddine <span class="text-zinc-500">•</span> Founder & Solo Editor</span>
+      </div>
+
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-40 hover:opacity-100 transition-opacity">
+      <a href="#work" aria-label="Scroll to selected work" class="text-zinc-400 hover:text-white transition-colors">
+        <span class="material-symbols-outlined text-2xl animate-bounce">keyboard_arrow_down</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 2. Selected Work (Portfolio Section) -->
+  <section class="py-16 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto" id="work">
+    
+    <!-- Section Header -->
+    <div class="mb-12 sm:mb-16 text-center sm:text-left flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-white/10 pb-8">
+      <div>
+        <div class="inline-flex items-center gap-2 text-xs font-bold text-[#06B6D4] uppercase tracking-widest mb-2 font-mono">
+          <span>PORTFOLIO</span>
+        </div>
+        <h2 class="sec-headline text-white">Selected work</h2>
+        <p class="text-[#a1a1aa] max-w-2xl text-sm sm:text-base mt-2 leading-relaxed">
+          Retention-focused editing across educational long-form videos, talking-head content, high-impact vertical clips, and motion graphics.
+        </p>
+      </div>
+
+      <!-- Category Badges -->
+      <div class="flex flex-wrap gap-2 justify-center sm:justify-start">
+        <span class="text-xs px-3 py-1.5 rounded-lg bg-[#8B5CF6]/15 border border-[#8B5CF6]/30 text-[#8B5CF6] font-semibold">Educational YouTube</span>
+        <span class="text-xs px-3 py-1.5 rounded-lg bg-[#06B6D4]/15 border border-[#06B6D4]/30 text-[#06B6D4] font-semibold">Talking-Head</span>
+        <span class="text-xs px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-zinc-300 font-semibold">Short-Form</span>
+        <span class="text-xs px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-zinc-300 font-semibold">Motion Graphics</span>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- Core Services Section -->
-<section class="py-16 sm:py-20 bg-[#050507] relative" id="services">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <!-- Portfolio Grid with Structured Case-Study Cards -->
+    <div class="portfolio-grid">
+
+      <!-- Project 1: AI & Tech Educational Breakdown -->
+      <article class="glass-card rounded-2xl overflow-hidden flex flex-col group" aria-labelledby="proj1-title">
+        <div class="relative overflow-hidden bg-black" style="aspect-ratio: 9/16; max-height: 480px;">
+          <video id="vid1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" muted loop playsinline preload="metadata" poster="./assets/logo.png">
+            <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1780937212/Horisontal_Show_kzurv2.mp4#t=1" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+          
+          <div class="absolute inset-0 bg-gradient-to-t from-[#050507] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+          
+          <div class="absolute top-3 left-3 flex gap-2">
+            <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-[#8B5CF6]/90 text-white backdrop-blur-md">Educational YouTube</span>
+            <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-black/60 text-zinc-300 border border-white/20 backdrop-blur-md">Concept Edit</span>
+          </div>
+
+          <div class="video-controls absolute bottom-3 right-3 flex gap-2 z-20">
+            <button data-vid="vid1" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause AI breakdown video">
+              <span class="material-symbols-outlined text-lg">play_arrow</span>
+            </button>
+            <button data-vid="vid1" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Toggle mute on AI breakdown video">
+              <span class="material-symbols-outlined text-lg">volume_off</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="p-5 flex flex-col flex-grow justify-between gap-3 bg-[#08080c]">
+          <div>
+            <h3 id="proj1-title" class="text-lg font-bold text-white font-heading">AI Monetization Blueprint</h3>
+            <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Objective:</strong> Deliver a high-retention breakdown on leveraging AI tools without viewer fatigue.</p>
+            <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">My contribution:</strong> Dynamic B-roll pacing, animated UI overlays, callouts, and audio mastering.</p>
+          </div>
+          <div class="pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-zinc-400">
+            <span><strong class="text-[#06B6D4]">Deliverables:</strong> 1 Long-form Edit + 3 Shorts</span>
+            <span class="text-zinc-500 font-mono">Concept Edit</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2: Career Strategy / Talking-Head Edit -->
+      <article class="glass-card rounded-2xl overflow-hidden flex flex-col group" aria-labelledby="proj2-title">
+        <div class="relative overflow-hidden bg-black" style="aspect-ratio: 9/16; max-height: 480px;">
+          <video id="vid2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" muted loop playsinline preload="metadata" poster="./assets/logo.png">
+            <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321761/reach_1_final_qsqai9.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+          
+          <div class="absolute inset-0 bg-gradient-to-t from-[#050507] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+
+          <div class="absolute top-3 left-3 flex gap-2">
+            <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-[#06B6D4]/90 text-white backdrop-blur-md">Talking-Head</span>
+            <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-black/60 text-zinc-300 border border-white/20 backdrop-blur-md">Client Project</span>
+          </div>
+
+          <div class="video-controls absolute bottom-3 right-3 flex gap-2 z-20">
+            <button data-vid="vid2" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause Career Strategy video">
+              <span class="material-symbols-outlined text-lg">play_arrow</span>
+            </button>
+            <button data-vid="vid2" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Toggle mute on Career Strategy video">
+              <span class="material-symbols-outlined text-lg">volume_off</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="p-5 flex flex-col flex-grow justify-between gap-3 bg-[#08080c]">
+          <div>
+            <h3 id="proj2-title" class="text-lg font-bold text-white font-heading">When to Quit Your Job?</h3>
+            <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Objective:</strong> Maximize viewer watch time on key decision points through emotional hook & rhythmic cutting.</p>
+            <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">My contribution:</strong> Hook pacing, kinetic typography captions, sound effects, and color grading.</p>
+          </div>
+          <div class="pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-zinc-400">
+            <span><strong class="text-[#8B5CF6]">Deliverables:</strong> 9:16 Vertical Reel</span>
+            <span class="text-zinc-500 font-mono">Client Project</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3: Coach Mindset & Life Advice -->
+      <article class="glass-card rounded-2xl overflow-hidden flex flex-col group" aria-labelledby="proj3-title">
+        <div class="relative overflow-hidden bg-black" style="aspect-ratio: 9/16; max-height: 480px;">
+          <video id="vid3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" muted loop playsinline preload="metadata" poster="./assets/logo.png">
+            <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779322705/Advice_1_Show_bu7n6d.mp4#t=1.6" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+          
+          <div class="absolute inset-0 bg-gradient-to-t from-[#050507] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+
+          <div class="absolute top-3 left-3 flex gap-2">
+            <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-[#8B5CF6]/90 text-white backdrop-blur-md">Coach Content</span>
+            <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-black/60 text-zinc-300 border border-white/20 backdrop-blur-md">Client Project</span>
+          </div>
+
+          <div class="video-controls absolute bottom-3 right-3 flex gap-2 z-20">
+            <button data-vid="vid3" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause Mindset video">
+              <span class="material-symbols-outlined text-lg">play_arrow</span>
+            </button>
+            <button data-vid="vid3" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Toggle mute on Mindset video">
+              <span class="material-symbols-outlined text-lg">volume_off</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="p-5 flex flex-col flex-grow justify-between gap-3 bg-[#08080c]">
+          <div>
+            <h3 id="proj3-title" class="text-lg font-bold text-white font-heading">Core Life Lessons for High Performers</h3>
+            <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Objective:</strong> Create an intimate, compelling advisory piece for consultant personal branding.</p>
+            <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">My contribution:</strong> Seamless sentence restructuring, subtle zoom punches, and warm skin-tone grading.</p>
+          </div>
+          <div class="pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-zinc-400">
+            <span><strong class="text-[#06B6D4]">Deliverables:</strong> Social Cut + Master</span>
+            <span class="text-zinc-500 font-mono">Client Project</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4: Motion Design & Marketing Strategy -->
+      <article class="glass-card rounded-2xl overflow-hidden flex flex-col group" aria-labelledby="proj4-title">
+        <div class="relative overflow-hidden bg-black" style="aspect-ratio: 9/16; max-height: 480px;">
+          <video id="vid4" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" muted loop playsinline preload="metadata" poster="./assets/logo.png">
+            <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321753/%D9%85%D9%88%D9%86%D8%AA%D8%A7%D8%AC_%D9%81%D9%8A%D8%AF%D9%8A%D9%88_%D8%AC%D8%AF%D9%8A%D8%AF_New_edit_video..Edit_by_yasser_video_editor.._edit_editing_dz_motiondes_nud2pp.mp4#t=1.2" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+          
+          <div class="absolute inset-0 bg-gradient-to-t from-[#050507] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+
+          <div class="absolute top-3 left-3 flex gap-2">
+            <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-[#06B6D4]/90 text-white backdrop-blur-md">Motion Graphics</span>
+            <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-black/60 text-zinc-300 border border-white/20 backdrop-blur-md">Personal Project</span>
+          </div>
+
+          <div class="video-controls absolute bottom-3 right-3 flex gap-2 z-20">
+            <button data-vid="vid4" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause Motion Graphics video">
+              <span class="material-symbols-outlined text-lg">play_arrow</span>
+            </button>
+            <button data-vid="vid4" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Toggle mute on Motion Graphics video">
+              <span class="material-symbols-outlined text-lg">volume_off</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="p-5 flex flex-col flex-grow justify-between gap-3 bg-[#08080c]">
+          <div>
+            <h3 id="proj4-title" class="text-lg font-bold text-white font-heading">Digital Scale Strategy</h3>
+            <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Objective:</strong> Illustrate abstract marketing concepts with seamless 2D vector animations and charts.</p>
+            <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">My contribution:</strong> Motion graphics in After Effects, asset styling, and spatial sound design.</p>
+          </div>
+          <div class="pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-zinc-400">
+            <span><strong class="text-[#8B5CF6]">Deliverables:</strong> 9:16 Vertical Animation</span>
+            <span class="text-zinc-500 font-mono">Personal Project</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 5: Time Mastery / Educational Short -->
+      <article class="glass-card rounded-2xl overflow-hidden flex flex-col group" aria-labelledby="proj5-title">
+        <div class="relative overflow-hidden bg-black" style="aspect-ratio: 9/16; max-height: 480px;">
+          <video id="vid5" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" muted loop playsinline preload="metadata" poster="./assets/logo.png">
+            <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321749/Day_1_show_ekxlxo.mp4#t=1" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+          
+          <div class="absolute inset-0 bg-gradient-to-t from-[#050507] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+
+          <div class="absolute top-3 left-3 flex gap-2">
+            <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-[#8B5CF6]/90 text-white backdrop-blur-md">Short-Form</span>
+            <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-black/60 text-zinc-300 border border-white/20 backdrop-blur-md">Concept Edit</span>
+          </div>
+
+          <div class="video-controls absolute bottom-3 right-3 flex gap-2 z-20">
+            <button data-vid="vid5" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause Time Mastery video">
+              <span class="material-symbols-outlined text-lg">play_arrow</span>
+            </button>
+            <button data-vid="vid5" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Toggle mute on Time Mastery video">
+              <span class="material-symbols-outlined text-lg">volume_off</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="p-5 flex flex-col flex-grow justify-between gap-3 bg-[#08080c]">
+          <div>
+            <h3 id="proj5-title" class="text-lg font-bold text-white font-heading">Productivity & Time Architecture</h3>
+            <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Objective:</strong> Compress a 10-minute podcast into a punchy 45-second high-yield viral short.</p>
+            <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">My contribution:</strong> Content repurposing, dynamic caption tracking, and auditory pattern interrupts.</p>
+          </div>
+          <div class="pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-zinc-400">
+            <span><strong class="text-[#06B6D4]">Deliverables:</strong> Shorts / TikTok / Reels</span>
+            <span class="text-zinc-500 font-mono">Concept Edit</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 6: Apple Aesthetic / Minimal Storytelling -->
+      <article class="glass-card rounded-2xl overflow-hidden flex flex-col group" aria-labelledby="proj6-title">
+        <div class="relative overflow-hidden bg-black" style="aspect-ratio: 9/16; max-height: 480px;">
+          <video id="vid6" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" muted loop playsinline preload="metadata" poster="./assets/logo.png">
+            <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321749/Day_2_show_vvjbwn.mp4#t=2" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+          
+          <div class="absolute inset-0 bg-gradient-to-t from-[#050507] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+
+          <div class="absolute top-3 left-3 flex gap-2">
+            <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-[#06B6D4]/90 text-white backdrop-blur-md">Visual Storytelling</span>
+            <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-black/60 text-zinc-300 border border-white/20 backdrop-blur-md">Personal Project</span>
+          </div>
+
+          <div class="video-controls absolute bottom-3 right-3 flex gap-2 z-20">
+            <button data-vid="vid6" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause Visual Storytelling video">
+              <span class="material-symbols-outlined text-lg">play_arrow</span>
+            </button>
+            <button data-vid="vid6" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Toggle mute on Visual Storytelling video">
+              <span class="material-symbols-outlined text-lg">volume_off</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="p-5 flex flex-col flex-grow justify-between gap-3 bg-[#08080c]">
+          <div>
+            <h3 id="proj6-title" class="text-lg font-bold text-white font-heading">Clean Minimal Aesthetics</h3>
+            <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Objective:</strong> Deliver an understated, luxury Apple-style presentation with restrained graphics.</p>
+            <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">My contribution:</strong> Precise color balance, elegant typography layout, and smooth micro-transitions.</p>
+          </div>
+          <div class="pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-zinc-400">
+            <span><strong class="text-[#8B5CF6]">Deliverables:</strong> Vertical Master File</span>
+            <span class="text-zinc-500 font-mono">Personal Project</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- 3. Before & After Showcase -->
+  <section class="py-16 sm:py-20 bg-[#08080c] border-y border-white/5 relative overflow-hidden" id="transformation">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center mb-10 sm:mb-14">
+        <span class="text-xs font-bold text-[#8B5CF6] uppercase tracking-widest font-mono">THE TRANSFORMATION</span>
+        <h2 class="sec-headline mt-1 text-white">Before & After My Edit</h2>
+        <p class="text-[#a1a1aa] max-w-2xl mx-auto text-sm sm:text-base mt-2 leading-relaxed">
+          See how raw, flat recorded footage is transformed into engaging, color-graded, and retention-engineered content.
+        </p>
+      </div>
+
+      <!-- Before / After Interactive Container -->
+      <div class="glass-card rounded-2xl p-4 sm:p-6 max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          
+          <!-- Interactive Visual Comparison -->
+          <div class="relative rounded-xl overflow-hidden border border-white/10 aspect-[4/5] sm:aspect-square bg-black shadow-2xl">
+            <!-- Edited Version (Bottom Layer) -->
+            <div class="absolute inset-0 w-full h-full">
+              <video class="w-full h-full object-cover" muted loop autoplay playsinline>
+                <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321761/reach_1_final_qsqai9.mp4" type="video/mp4">
+              </video>
+              <div class="absolute top-3 right-3 bg-[#06B6D4]/90 text-black font-bold text-xs px-2.5 py-1 rounded shadow-md z-10">
+                AFTER: Polished Edit
+              </div>
+            </div>
+
+            <!-- Raw Version (Top Grayscale / Raw simulation) -->
+            <div id="ba-clip" class="absolute inset-0 w-1/2 h-full overflow-hidden border-r-2 border-[#8B5CF6] bg-black">
+              <div class="w-[200%] h-full relative">
+                <video class="w-full h-full object-cover filter grayscale contrast-75 brightness-90" muted loop autoplay playsinline>
+                  <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321761/reach_1_final_qsqai9.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="absolute top-3 left-3 bg-black/80 text-white font-bold text-xs px-2.5 py-1 rounded border border-white/20 z-10">
+                BEFORE: Raw Footage
+              </div>
+            </div>
+
+            <!-- Slider Control -->
+            <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" id="ba-slider" aria-label="Before and after footage comparison slider">
+            <div id="ba-line" class="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-1 bg-[#8B5CF6] pointer-events-none shadow-[0_0_15px_#8B5CF6]">
+              <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-white text-black flex items-center justify-center text-xs font-bold shadow-lg">
+                <span class="material-symbols-outlined text-sm">unfold_more</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Explanation Points -->
+          <div class="flex flex-col gap-4 text-left">
+            <h3 class="text-xl font-bold text-white font-heading">What changes when I edit your content:</h3>
+            
+            <div class="flex items-start gap-3.5">
+              <div class="w-7 h-7 rounded-lg bg-[#8B5CF6]/20 text-[#8B5CF6] flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="material-symbols-outlined text-base">timer</span>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white">Aggressive dead-air removal & pacing</h4>
+                <p class="text-xs text-zinc-400 mt-0.5">Eliminates pauses and hesitations while preserving your natural conversational flow.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-7 h-7 rounded-lg bg-[#06B6D4]/20 text-[#06B6D4] flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="material-symbols-outlined text-base">palette</span>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white">Professional color & skin-tone grading</h4>
+                <p class="text-xs text-zinc-400 mt-0.5">Transforms flat smartphone or log camera recordings into rich, cinematic visuals.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-7 h-7 rounded-lg bg-[#8B5CF6]/20 text-[#8B5CF6] flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="material-symbols-outlined text-base">subtitles</span>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white">Animated captions & visual anchors</h4>
+                <p class="text-xs text-zinc-400 mt-0.5">Keeps viewers hooked with highlighted keywords, sound cues, and graphic callouts.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-7 h-7 rounded-lg bg-[#06B6D4]/20 text-[#06B6D4] flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span class="material-symbols-outlined text-base">graphic_eq</span>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white">Crystal-clear audio & sound design</h4>
+                <p class="text-xs text-zinc-400 mt-0.5">Denoising, EQ matching, compression, and subtle sound effects for tactile realism.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. Editing Showreel Section -->
+  <section class="py-16 sm:py-24 px-4 sm:px-6 max-w-5xl mx-auto" id="showreel">
+    <div class="text-center mb-10 sm:mb-12">
+      <span class="text-xs font-bold text-[#06B6D4] uppercase tracking-widest font-mono">CINEMATIC REEL</span>
+      <h2 class="sec-headline mt-1 text-white">Editing showreel</h2>
+      <p class="text-[#a1a1aa] max-w-2xl mx-auto text-sm sm:text-base mt-2 leading-relaxed">
+        A selection of my work across long-form videos, short-form content, motion graphics, and visual storytelling.
+      </p>
+    </div>
+
+    <div class="relative glass-card rounded-2xl overflow-hidden border border-white/10 shadow-2xl group bg-black" style="aspect-ratio: 16/9;">
+      <video id="main-showreel" class="w-full h-full object-cover" muted loop playsinline preload="metadata" poster="./assets/logo.png">
+        <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1780937212/Horisontal_Show_kzurv2.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+
+      <!-- Center Play Trigger Overlay -->
+      <div id="showreel-overlay" class="absolute inset-0 bg-black/40 backdrop-blur-[2px] flex flex-col items-center justify-center cursor-pointer transition-opacity duration-300">
+        <button id="showreel-main-btn" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-tr from-[#8B5CF6] to-[#06B6D4] text-white flex items-center justify-center shadow-2xl shadow-[#8B5CF6]/40 hover:scale-110 transition-transform" aria-label="Play editing showreel with audio">
+          <span class="material-symbols-outlined text-3xl sm:text-4xl">play_arrow</span>
+        </button>
+        <span class="text-white font-bold text-xs sm:text-sm mt-3 tracking-wider uppercase font-heading">Watch Showreel</span>
+      </div>
+
+      <!-- Showreel bottom controls -->
+      <div class="absolute bottom-4 right-4 flex items-center gap-2 z-20">
+        <button data-vid="main-showreel" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play/Pause showreel">
+          <span class="material-symbols-outlined text-lg">play_arrow</span>
+        </button>
+        <button data-vid="main-showreel" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Mute/Unmute showreel">
+          <span class="material-symbols-outlined text-lg">volume_off</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Focused Services Section -->
+  <section class="py-16 sm:py-24 bg-[#050507] relative" id="services">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center mb-12 sm:mb-16">
+        <span class="text-xs font-bold text-[#8B5CF6] uppercase tracking-widest font-mono">WHAT I DO</span>
+        <h2 class="sec-headline mt-1 text-white">Focused editing services</h2>
+        <p class="text-[#a1a1aa] max-w-2xl mx-auto text-sm sm:text-base mt-2 leading-relaxed">
+          Tailored editing packages built specifically for educational creators, coaches, and personal brands who value quality and consistency.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- Service 1: YouTube Editing -->
+        <div class="service-card glass-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between group border border-white/10 hover:border-[#8B5CF6]/50">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#8B5CF6]/15 text-[#8B5CF6] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-2xl">smart_display</span>
+            </div>
+            <h3 class="text-xl font-bold text-white font-heading mb-2">YouTube editing</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+              Retention-focused editing for educational videos, talking-head content, tutorials, and personal brands.
+            </p>
+            
+            <ul class="text-xs text-zinc-300 flex flex-col gap-2.5">
+              <li class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[#8B5CF6] text-sm">check_circle</span> Pacing and structure</li>
+              <li class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[#8B5CF6] text-sm">check_circle</span> Contextual B-roll sourcing</li>
+              <li class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[#8B5CF6] text-sm">check_circle</span> Custom motion graphics & callouts</li>
+              <li class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[#8B5CF6] text-sm">check_circle</span> Captions and key takeaway text</li>
+              <li class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[#8B5CF6] text-sm">check_circle</span> Sound design & vocal leveling</li>
+              <li class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[#8B5CF6] text-sm">check_circle</span> Color correction & revisions</li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-5 border-t border-white/10">
+            <a href="#contact" class="text-xs font-bold text-[#8B5CF6] hover:text-white inline-flex items-center gap-1 group-hover:translate-x-1 transition-all">
+              Inquire about YouTube editing <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 2: Short-Form Editing -->
+        <div class="service-card glass-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between group border border-white/10 hover:border-[#06B6D4]/50">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#06B6D4]/15 text-[#06B6D4] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-2xl">phone_android</span>
+            </div>
+            <h3 class="text-xl font-bold text-white font-heading mb-2">Short-form editing</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+              Engaging vertical content for Instagram Reels, TikTok, and YouTube Shorts engineered for high completion rates.
+            </p>
+            
+            <ul class="text-xs text-zinc-300 flex flex-col gap-2.5">
+              <li class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[#06B6D4] text-sm">check_circle</span> First 3-second opening hooks</li>
+              <li class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[#06B6D4] text-sm">check_circle</span> Animated dynamic captions</li>
+              <li class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[#06B6D4] text-sm">check_circle</span> Visual pattern interruptions</li>
+              <li class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[#06B6D4] text-sm">check_circle</span> Kinetic sound effects & audio drops</li>
+              <li class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[#06B6D4] text-sm">check_circle</span> Platform-ready vertical exports (9:16)</li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-5 border-t border-white/10">
+            <a href="#contact" class="text-xs font-bold text-[#06B6D4] hover:text-white inline-flex items-center gap-1 group-hover:translate-x-1 transition-all">
+              Inquire about Short-form editing <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 3: Content Repurposing -->
+        <div class="service-card glass-card p-6 sm:p-8 rounded-2xl flex flex-col justify-between group border border-white/10 hover:border-[#8B5CF6]/50">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-[#8B5CF6]/15 text-[#8B5CF6] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-2xl">autorenew</span>
+            </div>
+            <h3 class="text-xl font-bold text-white font-heading mb-2">Content repurposing</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+              Turn one long recording into multiple short clips that can be published throughout the month.
+            </p>
+            
+            <ul class="text-xs text-zinc-300 flex flex-col gap-2.5">
+              <li class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[#8B5CF6] text-sm">check_circle</span> Podcast & interview highlight extraction</li>
+              <li class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[#8B5CF6] text-sm">check_circle</span> Webinar & course lesson reformatting</li>
+              <li class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[#8B5CF6] text-sm">check_circle</span> Multi-clip monthly content packages</li>
+              <li class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[#8B5CF6] text-sm">check_circle</span> Optimized for LinkedIn, IG & TikTok</li>
+              <li class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[#8B5CF6] text-sm">check_circle</span> Seamless batch delivery workflows</li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-5 border-t border-white/10">
+            <a href="#contact" class="text-xs font-bold text-[#8B5CF6] hover:text-white inline-flex items-center gap-1 group-hover:translate-x-1 transition-all">
+              Inquire about Repurposing <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. About Dhia Section -->
+  <section class="py-16 sm:py-24 bg-[#0a0a0d] overflow-hidden border-t border-white/5" id="about">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="about-grid">
+        
+        <!-- Portrait Container -->
+        <div class="relative flex justify-center">
+          <div class="absolute -top-10 -left-10 w-48 h-48 bg-[#8B5CF6]/20 rounded-full blur-3xl opacity-50 floating"></div>
+          <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-[#06B6D4]/20 rounded-full blur-3xl opacity-50 floating" style="animation-delay:-3s"></div>
+          
+          <div class="relative z-10 rounded-2xl overflow-hidden glass-card p-3 border border-white/10 max-w-sm w-full">
+            <!-- 
+              FOUNDER PORTRAIT:
+              Filename: assets/dhia-portrait.jpg (or .png / .webp)
+              Recommended Dimensions: 600x750px (4:5 portrait ratio)
+            -->
+            <div class="w-full aspect-[4/5] bg-gradient-to-b from-[#121218] to-[#08080c] rounded-xl overflow-hidden flex flex-col items-center justify-center p-6 text-center relative group">
+              <img class="w-32 h-32 rounded-full object-cover shadow-2xl border-2 border-white/20 mb-4 transition-transform duration-500 group-hover:scale-105" src="./assets/logo.png" alt="Dhia Eddine - Video Editor & Founder">
+              <h3 class="text-white font-bold text-lg font-heading">Dhia Eddine</h3>
+              <p class="text-xs text-[#06B6D4] font-medium mt-0.5">Video Editor & Founder, Dhia Studio</p>
+              <div class="mt-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[11px] font-semibold">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Available for Select Remote Clients</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copy & Capabilities -->
+        <div class="flex flex-col gap-5">
+          <div>
+            <span class="text-xs font-bold text-[#8B5CF6] uppercase tracking-widest font-mono">ABOUT ME</span>
+            <h2 class="sec-headline mt-1 text-white">Hi, I’m Dhia.</h2>
+          </div>
+
+          <div class="text-[#a1a1aa] text-sm sm:text-base leading-relaxed flex flex-col gap-4">
+            <p>
+              I’m a video editor and the founder of Dhia Studio. I work directly with creators and businesses to transform raw footage into polished content built for clarity, retention, and consistency.
+            </p>
+            <p class="text-white font-medium">
+              When you hire Dhia Studio, you work directly with me—from the initial conversation to the final delivery.
+            </p>
+            <p>
+              No project managers or outsourced junior editors. I personally handle your pacing, narrative rhythm, graphics, and color grading so your content maintains an uncompromising standard.
+            </p>
+          </div>
+
+          <!-- Honest Working Details & Specs -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-2">
+            
+            <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
+              <div class="text-xs text-[#06B6D4] font-bold uppercase tracking-wider mb-1">Editing Tools</div>
+              <div class="text-xs text-zinc-300 font-medium leading-relaxed">Premiere Pro, After Effects, DaVinci Resolve, Photoshop</div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
+              <div class="text-xs text-[#8B5CF6] font-bold uppercase tracking-wider mb-1">Content Specialties</div>
+              <div class="text-xs text-zinc-300 font-medium leading-relaxed">Educational YouTube, Talking-Head, High-Retention Shorts</div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
+              <div class="text-xs text-[#06B6D4] font-bold uppercase tracking-wider mb-1">Working Availability</div>
+              <div class="text-xs text-zinc-300 font-medium leading-relaxed">Taking on 2 new creators for weekly & monthly retainers</div>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
+              <div class="text-xs text-[#8B5CF6] font-bold uppercase tracking-wider mb-1">Typical Turnaround</div>
+              <div class="text-xs text-zinc-300 font-medium leading-relaxed">48–72h for long-form / 24–48h for short-form clips</div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Working Process Section -->
+  <section class="py-16 sm:py-24 px-4 sm:px-6 max-w-7xl mx-auto" id="process">
+    
     <div class="text-center mb-12 sm:mb-16">
-      <span class="text-xs font-bold text-[#a1a1aa] uppercase tracking-widest" style="font-family:Geist,sans-serif">Capabilities</span>
-      <h2 class="sec-headline mt-1 mb-3">Core Services</h2>
-      <p class="text-[#a1a1aa] max-w-2xl mx-auto text-base leading-relaxed">Full-spectrum creative solutions tailored for brands that demand nothing less than perfection.</p>
+      <span class="text-xs font-bold text-[#06B6D4] uppercase tracking-widest font-mono">SIMPLE 3-STEP COLLABORATION</span>
+      <h2 class="sec-headline mt-1 text-white">How we can work together</h2>
+      <p class="text-[#a1a1aa] max-w-2xl mx-auto text-sm sm:text-base mt-2 leading-relaxed">
+        A streamlined, low-risk process designed to test fit quickly and establish a frictionless ongoing editing workflow.
+      </p>
     </div>
-    <div class="services-grid md:flex justify-centerd">
-      <!-- Service 1 -->
-      <div class="service-card glass-card p-6 sm:p-8 rounded-2xl flex flex-col gap-4 transition-all duration-300 group">
-        <div class="w-14 h-14 bg-[#8B5CF6]/10 rounded-xl flex items-center justify-center group-hover:bg-[#8B5CF6]/20 transition-colors flex-shrink-0">
-          <span class="material-symbols-outlined text-[#8B5CF6] text-3xl">movie_edit</span>
-        </div>
-        <h3 class="text-xl font-bold text-white" style="font-family:Montserrat,sans-serif">Video Editing</h3>
-        <p class="text-[#a1a1aa] text-sm leading-relaxed">Narrative rhythm, multi-cam mastering, and professional color grading using DaVinci Resolve and Premiere Pro.</p>
-        <ul class="text-xs text-[#8B5CF6]/80 flex flex-col gap-2 mt-auto">
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">check_circle</span> 4K/8K Workflow</li>
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">check_circle</span> Sound Engineering</li>
-        </ul>
-      </div>
-      <!-- Service 2 -->
-      <div class="service-card glass-card p-6 sm:p-8 rounded-2xl flex flex-col gap-4 transition-all duration-300 group border-b-4 border-b-[#06B6D4]/20">
-        <div class="w-14 h-14 bg-[#06B6D4]/10 rounded-xl flex items-center justify-center group-hover:bg-[#06B6D4]/20 transition-colors flex-shrink-0">
-          <span class="material-symbols-outlined text-[#06B6D4] text-3xl">motion_photos_on</span>
-        </div>
-        <h3 class="text-xl font-bold text-white" style="font-family:Montserrat,sans-serif">Motion Graphics</h3>
-        <p class="text-[#a1a1aa] text-sm leading-relaxed">Complex 2D/3D animations, digital set extensions, and high-impact VFX that bring impossible ideas to life.</p>
-        <ul class="text-xs text-[#06B6D4]/80 flex flex-col gap-2 mt-auto">
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">check_circle</span> Dynamic Typography</li>
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">check_circle</span> 3D Visualization</li>
-        </ul>
-      </div>
-      <!-- Service 3 -->
-      <div class="service-card glass-card p-6 sm:p-8 rounded-2xl flex flex-col gap-4 transition-all duration-300 group">
-        <div class="w-14 h-14 bg-[#a1a1aa]/10 rounded-xl flex items-center justify-center group-hover:bg-[#a1a1aa]/20 transition-colors flex-shrink-0">
-          <span class="material-symbols-outlined text-[#a1a1aa] text-3xl">architecture</span>
-        </div>
-        <h3 class="text-xl font-bold text-white" style="font-family:Montserrat,sans-serif">Visual Identity</h3>
-        <p class="text-[#a1a1aa] text-sm leading-relaxed">Strategic brand aesthetics, vector asset creation, and storyboard design for coherent cross-platform campaigns.</p>
-        <ul class="text-xs text-[#a1a1aa]/80 flex flex-col gap-2 mt-auto">
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">check_circle</span> Brand Strategy</li>
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">check_circle</span> Design Systems</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- Client Testimonials Section -->
-<!-- <section class="py-16 sm:py-20 bg-[#020203] relative overflow-hidden" id="testimonials">
-  <div class="absolute top-0 right-0 w-96 h-96 bg-[#8B5CF6]/5 blur-full rounded-full -mr-48 -mt-48 pointer-events-none"></div>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-    <div class="text-center mb-12 sm:mb-16">
-      <span class="text-xs font-bold text-[#06B6D4] uppercase tracking-widest" style="font-family:Geist,sans-serif">Feedback</span>
-      <h2 class="sec-headline mt-1">Voices of Partnership</h2>
-    </div>
-    <div class="testimonials-grid"> -->
-      <!-- Testimonial 1 -->
-      <!-- <div class="glass-card p-6 sm:p-8 rounded-xl border border-white/5 relative">
-        <span class="material-symbols-outlined text-[#8B5CF6]/20 absolute top-4 right-4 text-5xl">format_quote</span>
-        <div class="flex gap-1 mb-4">
-          <span class="material-symbols-outlined text-[#06B6D4] text-sm" style="font-variation-settings:'FILL' 1">star</span>
-          <span class="material-symbols-outlined text-[#06B6D4] text-sm" style="font-variation-settings:'FILL' 1">star</span>
-          <span class="material-symbols-outlined text-[#06B6D4] text-sm" style="font-variation-settings:'FILL' 1">star</span>
-          <span class="material-symbols-outlined text-[#06B6D4] text-sm" style="font-variation-settings:'FILL' 1">star</span>
-          <span class="material-symbols-outlined text-[#06B6D4] text-sm" style="font-variation-settings:'FILL' 1">star</span>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 relative">
+      
+      <!-- Step 1 -->
+      <div class="glass-card p-6 sm:p-8 rounded-2xl flex flex-col relative border border-white/10 group">
+        <div class="w-10 h-10 rounded-full bg-[#8B5CF6]/20 text-[#8B5CF6] border border-[#8B5CF6]/30 flex items-center justify-center font-bold text-sm mb-5 font-mono">
+          01
         </div>
-        <p class="text-white/90 italic text-sm leading-relaxed mb-6">"The best color grade I've ever seen. Dhia Studio didn't just edit our commercial; they gave it a soul. The attention to detail is simply unmatched in the industry."</p>
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-[#121214] flex items-center justify-center font-bold text-[#8B5CF6] text-sm flex-shrink-0">MA</div>
-          <div>
-            <div class="font-bold text-white text-sm">Marcus Avery</div>
-            <div class="text-xs text-[#a1a1aa]">Creative Director, Apex Motors</div>
-          </div>
-        </div>
-      </div> -->
-      <!-- Testimonial 2 -->
-      <!-- <div class="glass-card p-6 sm:p-8 rounded-xl border border-white/5 relative"> -->
-        <!-- <span class="material-symbols-outlined text-[#8B5CF6]/20 absolute top-4 right-4 text-5xl">format_quote</span>
-        <div class="flex gap-1 mb-4">
-          <span class="material-symbols-outlined text-[#06B6D4] text-sm" style="font-variation-settings:'FILL' 1">star</span>
-          <span class="material-symbols-outlined text-[#06B6D4] text-sm" style="font-variation-settings:'FILL' 1">star</span>
-          <span class="material-symbols-outlined text-[#06B6D4] text-sm" style="font-variation-settings:'FILL' 1">star</span>
-          <span class="material-symbols-outlined text-[#06B6D4] text-sm" style="font-variation-settings:'FILL' 1">star</span>
-          <span class="material-symbols-outlined text-[#06B6D4] text-sm" style="font-variation-settings:'FILL' 1">star</span>
-        </div>
-        <p class="text-white/90 italic text-sm leading-relaxed mb-6">"Their motion graphics work elevated our product launch to a global standard. They understood our vision from the first storyboard and exceeded every expectation."</p>
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-[#121214] flex items-center justify-center font-bold text-[#06B6D4] text-sm flex-shrink-0">SL</div>
-          <div>
-            <div class="font-bold text-white text-sm">Sarah Lin</div>
-            <div class="text-xs text-[#a1a1aa]">Head of Design, Nebula Tech</div>
-          </div>
-        </div>
-      </div> -->
-      <!-- Testimonial 3 -->
-      <!-- <div class="glass-card p-6 sm:p-8 rounded-xl border border-white/5 relative">
-        <span class="material-symbols-outlined text-[#8B5CF6]/20 absolute top-4 right-4 text-5xl">format_quote</span>
-        <div class="flex gap-1 mb-4">
-          <span class="material-symbols-outlined text-[#06B6D4] text-sm" style="font-variation-settings:'FILL' 1">star</span>
-          <span class="material-symbols-outlined text-[#06B6D4] text-sm" style="font-variation-settings:'FILL' 1">star</span>
-          <span class="material-symbols-outlined text-[#06B6D4] text-sm" style="font-variation-settings:'FILL' 1">star</span>
-          <span class="material-symbols-outlined text-[#06B6D4] text-sm" style="font-variation-settings:'FILL' 1">star</span>
-          <span class="material-symbols-outlined text-[#06B6D4] text-sm" style="font-variation-settings:'FILL' 1">star</span>
-        </div>
-        <p class="text-white/90 italic text-sm leading-relaxed mb-6">"Fast, professional, and incredibly creative. The transition from raw footage to a polished cinematic piece was seamless. Truly an elite production partner."</p>
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-[#121214] flex items-center justify-center font-bold text-[#a1a1aa] text-sm flex-shrink-0">JH</div>
-          <div>
-            <div class="font-bold text-white text-sm">James Hunter</div>
-            <div class="text-xs text-[#a1a1aa]">Producer, Hunter Media</div>
-          </div>
-        </div> -->
-      <!-- </div> -->
-    </div>
-  </div>
-</section>
+        <h3 class="text-lg font-bold text-white font-heading mb-2">1. Tell me about your content</h3>
+        <p class="text-zinc-400 text-sm leading-relaxed">
+          Send a recent video, examples you like, and your publishing schedule.
+        </p>
+      </div>
 
-<!-- Contact Form Section -->
-<section class="py-16 sm:py-20 px-4 sm:px-6 relative z-10" id="contact">
-  <div class="max-w-4xl mx-auto glass-card rounded-3xl p-6 sm:p-8 md:p-12 relative overflow-hidden border border-white/10 neon-glow-purple">
-    <div class="absolute top-0 right-0 w-64 h-64 bg-[#8B5CF6]/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
-    <div class="absolute bottom-0 left-0 w-64 h-64 bg-[#06B6D4]/10 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none"></div>
-    <div class="text-center mb-8 sm:mb-10 relative z-10">
-      <span class="text-xs font-bold text-[#06B6D4] uppercase tracking-widest" style="font-family:Geist,sans-serif">Start a Project</span>
-      <h2 class="sec-headline mt-2 mb-3">Hire Dhia Studio</h2>
-      <p class="text-[#a1a1aa] text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">Tell us about your project, timeline, and vision. We'll get back to you within 24 hours.</p>
-    </div>
-    <form id="client-form" class="flex flex-col gap-5 relative z-10" onsubmit="return handleClientForm(event)">
-      <div class="form-row">
-        <div class="flex flex-col gap-2 group">
-          <label class="text-xs font-bold text-[#a1a1aa] group-focus-within:text-[#8B5CF6] transition-colors uppercase tracking-wider" for="client-name">Full Name</label>
-          <input type="text" id="client-name" name="Client Full Name" class="bg-white/[0.03] border border-white/20 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#8B5CF6] focus:ring-1 focus:ring-[#8B5CF6] transition-all hover:border-white/40 w-full" placeholder="John Doe" required>
+      <!-- Step 2 -->
+      <div class="glass-card p-6 sm:p-8 rounded-2xl flex flex-col relative border border-[#8B5CF6]/30 group bg-[#8B5CF6]/[0.02]">
+        <div class="w-10 h-10 rounded-full bg-[#06B6D4]/20 text-[#06B6D4] border border-[#06B6D4]/30 flex items-center justify-center font-bold text-sm mb-5 font-mono">
+          02
         </div>
-        <div class="flex flex-col gap-2 group">
-          <label class="text-xs font-bold text-[#a1a1aa] group-focus-within:text-[#8B5CF6] transition-colors uppercase tracking-wider" for="client-email">Email Address</label>
-          <input type="email" id="client-email" name="Email Address" class="bg-white/[0.03] border border-white/20 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#8B5CF6] focus:ring-1 focus:ring-[#8B5CF6] transition-all hover:border-white/40 w-full" placeholder="john@company.com" required>
+        <div class="inline-block px-2.5 py-0.5 rounded-full bg-[#8B5CF6]/20 text-[#8B5CF6] text-[10px] font-bold uppercase tracking-wider mb-2 w-fit">
+          Low-Risk Trial
         </div>
+        <h3 class="text-lg font-bold text-white font-heading mb-2">2. Start with a paid trial</h3>
+        <p class="text-zinc-400 text-sm leading-relaxed">
+          I edit one video so you can evaluate the quality, communication, and turnaround.
+        </p>
       </div>
-      <div class="form-row">
-        <div class="flex flex-col gap-2 group">
-          <label class="text-xs font-bold text-[#a1a1aa] group-focus-within:text-[#8B5CF6] transition-colors uppercase tracking-wider" for="company-name">Brand / Company (Optional)</label>
-          <input type="text" id="company-name" name="Company Name" class="bg-white/[0.03] border border-white/20 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#8B5CF6] focus:ring-1 focus:ring-[#8B5CF6] transition-all hover:border-white/40 w-full" placeholder="Your Brand Name">
-        </div>
-        <div class="flex flex-col gap-2 group">
-          <label class="text-xs font-bold text-[#a1a1aa] group-focus-within:text-[#8B5CF6] transition-colors uppercase tracking-wider" for="budget-range">Estimated Budget</label>
-          <div class="relative">
-            <select id="budget-range" name="Estimated Budget" class="w-full *:bg-black bg-white/[0.03] border border-white/20 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#8B5CF6] focus:ring-1 focus:ring-[#8B5CF6] transition-all appearance-none hover:border-white/40" required>
-              <option value="" disabled selected>Select a range</option>
-              <option value="Under $1,000">Under $1,000</option>
-              <option value="$1,000 - $5,000">$1,000 – $5,000</option>
-              <option value="$5,000 - $10,000">$5,000 – $10,000</option>
-              <option value="$10,000+">$10,000+</option>
-            </select>
-            <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[#a1a1aa]">expand_more</span>
-          </div>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="flex flex-col gap-2 group">
-          <label class="text-xs font-bold text-[#a1a1aa] group-focus-within:text-[#8B5CF6] transition-colors uppercase tracking-wider" for="project-type">Project Type</label>
-          <div class="relative">
-            <select id="project-type" name="Project Type" class="w-full *:bg-black bg-white/[0.03] border border-white/20 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#8B5CF6] focus:ring-1 focus:ring-[#8B5CF6] transition-all appearance-none hover:border-white/40" required>
-              <option value="" disabled selected>Select an option</option>
-              <option value="Commercial Edit / Ad">Commercial Edit / Ad</option>
-              <option value="Social Media (TikTok / Reels)">Social Media (TikTok / Reels)</option>
-              <option value="YouTube / Long Form">YouTube / Long Form</option>
-              <option value="Motion Graphics / VFX">Motion Graphics / VFX</option>
-              <option value="Color Grading">Color Grading</option>
-              <option value="Other">Other</option>
-            </select>
-            <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[#a1a1aa]">expand_more</span>
-          </div>
-        </div>
-        <div class="flex flex-col gap-2 group">
-          <label class="text-xs font-bold text-[#a1a1aa] group-focus-within:text-[#8B5CF6] transition-colors uppercase tracking-wider" for="project-timeline">Project Timeline</label>
-          <div class="relative">
-            <select id="project-timeline" name="Project Timeline" class="w-full *:bg-black bg-white/[0.03] border border-white/20 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#8B5CF6] focus:ring-1 focus:ring-[#8B5CF6] transition-all appearance-none hover:border-white/40" required>
-              <option value="" disabled selected>Select timeline</option>
-              <option value="Urgent (< 1 week)">Urgent (&lt; 1 week)</option>
-              <option value="1 - 2 weeks">1 – 2 weeks</option>
-              <option value="3 - 4 weeks">3 – 4 weeks</option>
-              <option value="1+ month">1+ month</option>
-            </select>
-            <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[#a1a1aa]">expand_more</span>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-col gap-2 group">
-        <label class="text-xs font-bold text-[#a1a1aa] group-focus-within:text-[#8B5CF6] transition-colors uppercase tracking-wider" for="project-details">Project Details</label>
-        <textarea id="project-details" name="Project Details" rows="4" class="bg-white/[0.03] border border-white/20 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#8B5CF6] focus:ring-1 focus:ring-[#8B5CF6] transition-all resize-none hover:border-white/40 w-full" placeholder="Describe your vision, goals, and any reference links..." required></textarea>
-      </div>
-      <button type="submit" class="mt-2 bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] text-white font-bold py-4 rounded-lg hover:scale-[1.02] transition-transform duration-300 shadow-lg shadow-[#8B5CF6]/20 relative overflow-hidden group text-sm sm:text-base">
-        <span class="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
-        <span class="relative z-10 flex items-center justify-center gap-2">
-          Submit Inquiry
-          <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">send</span>
-        </span>
-      </button>
-    </form>
-  </div>
-</section>
 
-<!-- Connect / Socials Section -->
-<section class="py-16 sm:py-20 relative overflow-hidden px-4 sm:px-6" id="connect">
-  <div class="absolute inset-0 bg-[#8B5CF6]/5 -z-10"></div>
-  <div class="max-w-4xl mx-auto text-center glass-card p-8 sm:p-12 rounded-3xl border border-[#8B5CF6]/20 neon-glow-purple">
-    <h2 class="sec-headline mb-4">Connect With Me</h2>
-    <p class="text-[#a1a1aa] text-base leading-relaxed mb-8">Follow the journey, see behind the scenes, or reach out directly.</p>
-    <div class="socials-wrap">
-      <a href="mailto:dhiastudio.agency@gmail.com" class="px-5 py-3.5 bg-white/5 border border-white/20 text-white font-bold rounded-lg hover:bg-white/10 hover:border-[#8B5CF6]/50 transition-all duration-300 backdrop-blur-sm flex items-center justify-center gap-2 group text-sm">
-        <span class="material-symbols-outlined text-[#8B5CF6] group-hover:scale-110 transition-transform text-lg">mail</span>
-        <span>Email</span>
-      </a>
-      <!-- <a href="#" class="px-5 py-3.5 bg-white/5 border border-white/20 text-white font-bold rounded-lg hover:bg-white/10 hover:border-[#06B6D4]/50 transition-all duration-300 backdrop-blur-sm flex items-center justify-center gap-2 group text-sm">
-        <svg class="w-5 h-5 fill-[#06B6D4] group-hover:scale-110 transition-transform flex-shrink-0" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        <span>Instagram</span>
-      </a>
-      <a href="#" class="px-5 py-3.5 bg-white/5 border border-white/20 text-white font-bold rounded-lg hover:bg-white/10 hover:border-[#a1a1aa]/50 transition-all duration-300 backdrop-blur-sm flex items-center justify-center gap-2 group text-sm">
-        <svg class="w-5 h-5 fill-[#a1a1aa] group-hover:scale-110 transition-transform flex-shrink-0" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.12-3.44-3.17-3.8-5.46-.4-2.5.2-5.03 1.72-6.96 1.11-1.46 2.74-2.48 4.54-2.94.39-.1.79-.17 1.19-.22v4.06c-.46.06-.9.21-1.31.42-1.19.64-2.12 1.75-2.41 3.08-.2 1.02-.03 2.08.49 2.95.53.89 1.4 1.55 2.42 1.78.89.2 1.83.05 2.62-.43.91-.55 1.51-1.52 1.62-2.58.05-.6.04-1.21.04-1.81V.02z"/></svg>
-        <span>TikTok</span>
-      </a>
-      <a href="#" class="px-5 py-3.5 bg-white/5 border border-white/20 text-white font-bold rounded-lg hover:bg-white/10 hover:border-[#8B5CF6]/50 transition-all duration-300 backdrop-blur-sm flex items-center justify-center gap-2 group text-sm">
-        <svg class="w-5 h-5 fill-[#8B5CF6] group-hover:scale-110 transition-transform flex-shrink-0" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        <span>LinkedIn</span>
-      </a> -->
+      <!-- Step 3 -->
+      <div class="glass-card p-6 sm:p-8 rounded-2xl flex flex-col relative border border-white/10 group">
+        <div class="w-10 h-10 rounded-full bg-[#8B5CF6]/20 text-[#8B5CF6] border border-[#8B5CF6]/30 flex items-center justify-center font-bold text-sm mb-5 font-mono">
+          03
+        </div>
+        <h3 class="text-lg font-bold text-white font-heading mb-2">3. Build a monthly workflow</h3>
+        <p class="text-zinc-400 text-sm leading-relaxed">
+          If the trial is successful, we create a consistent editing and delivery system.
+        </p>
+      </div>
+
     </div>
-  </div>
-</section>
+
+  </section>
+
+  <!-- 8. Contact Section & Simplified Form -->
+  <section class="py-16 sm:py-24 px-4 sm:px-6 relative z-10" id="contact">
+    <div class="max-w-3xl mx-auto glass-card rounded-3xl p-6 sm:p-10 md:p-12 relative overflow-hidden border border-white/10 neon-glow-purple">
+      
+      <div class="absolute top-0 right-0 w-64 h-64 bg-[#8B5CF6]/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 w-64 h-64 bg-[#06B6D4]/10 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none"></div>
+
+      <!-- Header Copy -->
+      <div class="text-center mb-8 sm:mb-10 relative z-10">
+        <span class="text-xs font-bold text-[#06B6D4] uppercase tracking-widest font-mono">DIRECT INQUIRY</span>
+        <h2 class="sec-headline mt-1.5 mb-3 text-white">Need a reliable editor for your content?</h2>
+        <p class="text-[#a1a1aa] text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+          Send me one recent video and tell me what you want to improve. I’ll reply with a suggested editing direction and a paid-trial option.
+        </p>
+        <p class="text-xs text-zinc-400 mt-2 font-medium">
+          Direct email: <a href="mailto:dhia@dhiaeddine.studio" class="text-[#8B5CF6] hover:underline font-semibold">dhia@dhiaeddine.studio</a>
+        </p>
+      </div>
+
+      <!-- Simplified Client Form -->
+      <form id="client-form" class="flex flex-col gap-4 sm:gap-5 relative z-10" onsubmit="return handleClientForm(event)" novalidate>
+        
+        <!-- Row 1: Name & Email -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="flex flex-col gap-1.5 group">
+            <label class="text-xs font-bold text-zinc-300 uppercase tracking-wider" for="client-name">
+              Your Name <span class="text-[#8B5CF6]">*</span>
+            </label>
+            <input type="text" id="client-name" name="name" class="bg-white/[0.03] border border-white/15 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#8B5CF6] focus:ring-1 focus:ring-[#8B5CF6] transition-all hover:border-white/30 w-full" placeholder="Dhia Eddine" required aria-required="true">
+          </div>
+          
+          <div class="flex flex-col gap-1.5 group">
+            <label class="text-xs font-bold text-zinc-300 uppercase tracking-wider" for="client-email">
+              Email Address <span class="text-[#8B5CF6]">*</span>
+            </label>
+            <input type="email" id="client-email" name="email" class="bg-white/[0.03] border border-white/15 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#8B5CF6] focus:ring-1 focus:ring-[#8B5CF6] transition-all hover:border-white/30 w-full" placeholder="you@creator.com" required aria-required="true">
+          </div>
+        </div>
+
+        <!-- Row 2: Channel / Company & Link to Recent Video -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="flex flex-col gap-1.5 group">
+            <label class="text-xs font-bold text-zinc-300 uppercase tracking-wider" for="channel-name">
+              Channel or Company <span class="text-zinc-500 font-normal">(Optional)</span>
+            </label>
+            <input type="text" id="channel-name" name="company" class="bg-white/[0.03] border border-white/15 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#8B5CF6] focus:ring-1 focus:ring-[#8B5CF6] transition-all hover:border-white/30 w-full" placeholder="e.g. YouTube Channel / Brand">
+          </div>
+
+          <div class="flex flex-col gap-1.5 group">
+            <label class="text-xs font-bold text-zinc-300 uppercase tracking-wider" for="video-link">
+              Link to Recent Content <span class="text-zinc-500 font-normal">(Optional)</span>
+            </label>
+            <input type="url" id="video-link" name="video_link" class="bg-white/[0.03] border border-white/15 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#8B5CF6] focus:ring-1 focus:ring-[#8B5CF6] transition-all hover:border-white/30 w-full" placeholder="https://youtube.com/... or Google Drive">
+          </div>
+        </div>
+
+        <!-- Row 3: Editing Needed & Approximate Volume -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="flex flex-col gap-1.5 group">
+            <label class="text-xs font-bold text-zinc-300 uppercase tracking-wider" for="editing-type">
+              Type of Editing Needed
+            </label>
+            <div class="relative">
+              <select id="editing-type" name="projectType" class="w-full *:bg-[#0a0a0e] bg-white/[0.03] border border-white/15 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#8B5CF6] focus:ring-1 focus:ring-[#8B5CF6] transition-all appearance-none hover:border-white/30">
+                <option value="YouTube Long-Form">YouTube Editing (Long-form / Talking-Head)</option>
+                <option value="Short-Form Content">Short-Form (Reels / TikTok / Shorts)</option>
+                <option value="Content Repurposing">Content Repurposing (Long-to-Short)</option>
+                <option value="Motion Graphics / Visuals">Motion Graphics / Visual Storytelling</option>
+                <option value="Other">Other / Custom Request</option>
+              </select>
+              <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-zinc-400">expand_more</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-1.5 group">
+            <label class="text-xs font-bold text-zinc-300 uppercase tracking-wider" for="video-volume">
+              Approximate Monthly Video Volume
+            </label>
+            <div class="relative">
+              <select id="video-volume" name="volume" class="w-full *:bg-[#0a0a0e] bg-white/[0.03] border border-white/15 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#8B5CF6] focus:ring-1 focus:ring-[#8B5CF6] transition-all appearance-none hover:border-white/30">
+                <option value="1 Paid Trial Video">1 Paid Trial Video (First Step)</option>
+                <option value="2-4 videos per month">2 – 4 videos / month</option>
+                <option value="5-8 videos per month">5 – 8 videos / month</option>
+                <option value="9-16+ videos per month">9 – 16+ videos / month</option>
+                <option value="One-off specific project">One-off specific project</option>
+              </select>
+              <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-zinc-400">expand_more</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 4: Message / Details -->
+        <div class="flex flex-col gap-1.5 group">
+          <label class="text-xs font-bold text-zinc-300 uppercase tracking-wider" for="client-message">
+            Message & Details <span class="text-zinc-500 font-normal">(What do you want to improve?)</span>
+          </label>
+          <textarea id="client-message" name="message" rows="3" class="bg-white/[0.03] border border-white/15 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#8B5CF6] focus:ring-1 focus:ring-[#8B5CF6] transition-all resize-none hover:border-white/30 w-full" placeholder="Tell me about your publishing goals, current editing challenges, or reference links..."></textarea>
+        </div>
+
+        <!-- Validation Error Box -->
+        <div id="form-error" class="hidden p-3 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-medium"></div>
+
+        <!-- Submit Button -->
+        <button type="submit" id="submit-btn" class="mt-2 bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] text-white font-bold py-3.5 sm:py-4 rounded-xl hover:scale-[1.01] transition-transform duration-300 shadow-lg shadow-[#8B5CF6]/25 relative overflow-hidden group text-sm sm:text-base flex items-center justify-center gap-2">
+          <span class="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+          <span class="relative z-10 flex items-center justify-center gap-2">
+            Start a paid trial
+            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">send</span>
+          </span>
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+
 </main>
 
 <!-- Footer -->
-<footer class="w-full py-10 sm:py-14 bg-[#020203] border-t border-white/5">
-  <div class="footer-inner px-4 sm:px-8 max-w-7xl mx-auto">
-    <div class="flex flex-col gap-1">
-      <div class="font-bold text-[#8B5CF6] text-lg" style="font-family:Montserrat,sans-serif">Dhia Studio</div>
-      <div class="text-[#a1a1aa] text-sm">© 2024 Dhia Studio. Cinematic Production Excellence.</div>
+<footer class="w-full py-10 sm:py-14 bg-[#020204] border-t border-white/5" role="contentinfo">
+  <div class="footer-inner px-4 sm:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    
+    <div class="flex flex-col items-center md:items-start gap-1 text-center md:text-left">
+      <div class="font-extrabold text-white text-base tracking-wider font-heading flex items-center gap-2">
+        <span class="text-[#8B5CF6]">DHIA STUDIO</span>
+      </div>
+      <div class="text-[#a1a1aa] text-xs sm:text-sm">
+        Dhia Studio — Founder-led video editing by Dhia Eddine.
+      </div>
     </div>
-    <div class="footer-links">
-      <a class="text-xs text-[#a1a1aa] hover:text-[#8B5CF6] transition-colors" href="mailto:dhiastudio.agency@gmail.com">Email</a>
-      <!-- <a class="text-xs text-[#a1a1aa] hover:text-[#06B6D4] transition-colors" href="#">Instagram</a>
-      <a class="text-xs text-[#a1a1aa] hover:text-[#a1a1aa] transition-colors" href="#">TikTok</a>
-      <a class="text-xs text-[#a1a1aa] hover:text-[#8B5CF6] transition-colors" href="#">LinkedIn</a> -->
+
+    <div class="flex items-center gap-5 flex-wrap justify-center text-xs text-zinc-400">
+      <a class="hover:text-[#8B5CF6] transition-colors focus:text-[#8B5CF6] font-medium" href="mailto:dhia@dhiaeddine.studio">dhia@dhiaeddine.studio</a>
+      <span class="text-zinc-600">•</span>
+      <a class="hover:text-[#06B6D4] transition-colors focus:text-[#06B6D4]" href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <span class="text-zinc-600">•</span>
+      <a class="hover:text-zinc-200 transition-colors focus:text-zinc-200" href="https://tiktok.com" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <span class="text-zinc-600">•</span>
+      <span>© <span id="current-year">2026</span> Dhia Studio</span>
     </div>
+
   </div>
 </footer>
 
 <script>
-  // Hamburger toggle
+  // Dynamic Year
+  document.getElementById('current-year').innerText = new Date().getFullYear();
+
+  // Accessible Mobile Menu Toggle
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
-  hamburger.addEventListener('click', () => {
-    const open = mobileMenu.classList.toggle('open');
-    hamburger.classList.toggle('open', open);
-    hamburger.setAttribute('aria-expanded', open);
-  });
 
-  // Close mobile menu on link click
-  mobileMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', false);
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
-  });
 
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    // Close on navigation click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
     });
-  });
 
-  // Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('opacity-100','translate-y-0');
-        entry.target.classList.remove('opacity-0','translate-y-10');
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.focus();
       }
     });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('section').forEach(s => {
-    s.classList.add('transition-all','duration-700','opacity-0','translate-y-10');
-    observer.observe(s);
+  }
+
+  // Smooth Scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
   });
 
-  // Parallax hero
-  window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroImg = document.querySelector('section img');
-    if (heroImg) heroImg.style.transform = `translateY(${scrolled * 0.15}px) scale(1.1)`;
-  }, { passive: true });
-
-  // Video controls via data attributes — reliable play/pause & mute
+  // Video Play/Pause and Mute Controls
   document.querySelectorAll('.vid-btn').forEach(btn => {
     btn.addEventListener('click', function(e) {
       e.stopPropagation();
-      const v = document.getElementById(this.dataset.vid);
+      const videoId = this.dataset.vid;
+      const v = document.getElementById(videoId);
       if (!v) return;
       const icon = this.querySelector('span');
+
       if (this.dataset.action === 'playpause') {
-        if (v.paused) { v.play(); icon.innerText = 'pause'; }
-        else { v.pause(); icon.innerText = 'play_arrow'; }
-      } else {
+        if (v.paused) {
+          v.play().catch(() => {});
+          if (icon) icon.innerText = 'pause';
+        } else {
+          v.pause();
+          if (icon) icon.innerText = 'play_arrow';
+        }
+      } else if (this.dataset.action === 'mute') {
         v.muted = !v.muted;
-        icon.innerText = v.muted ? 'volume_off' : 'volume_up';
+        if (icon) icon.innerText = v.muted ? 'volume_off' : 'volume_up';
       }
     });
   });
 
-  // Form handler
+  // Showreel Center Overlay Trigger
+  const showreelOverlay = document.getElementById('showreel-overlay');
+  const showreelVideo = document.getElementById('main-showreel');
+  if (showreelOverlay && showreelVideo) {
+    showreelOverlay.addEventListener('click', () => {
+      showreelVideo.muted = false;
+      showreelVideo.play().then(() => {
+        showreelOverlay.classList.add('opacity-0', 'pointer-events-none');
+      }).catch(() => {
+        showreelVideo.muted = true;
+        showreelVideo.play();
+        showreelOverlay.classList.add('opacity-0', 'pointer-events-none');
+      });
+    });
+  }
+
+  // Before & After Slider Handler
+  const baSlider = document.getElementById('ba-slider');
+  const baClip = document.getElementById('ba-clip');
+  const baLine = document.getElementById('ba-line');
+
+  if (baSlider && baClip && baLine) {
+    baSlider.addEventListener('input', (e) => {
+      const val = e.target.value;
+      baClip.style.width = `${val}%`;
+      baLine.style.left = `${val}%`;
+    });
+  }
+
+  // Client Contact Form Handler with Validation and Fallbacks
   function handleClientForm(e) {
     e.preventDefault();
-    const name = document.getElementById('client-name').value;
-    const email = document.getElementById('client-email').value;
-    const company = document.getElementById('company-name').value || 'N/A';
-    const budget = document.getElementById('budget-range').value;
-    const projectType = document.getElementById('project-type').value;
-    const timeline = document.getElementById('project-timeline').value;
-    const details = document.getElementById('project-details').value;
-    const btn = document.querySelector('#client-form button[type=submit]');
-    const originalHTML = btn.innerHTML;
+    const nameEl = document.getElementById('client-name');
+    const emailEl = document.getElementById('client-email');
+    const companyEl = document.getElementById('channel-name');
+    const videoLinkEl = document.getElementById('video-link');
+    const editingTypeEl = document.getElementById('editing-type');
+    const volumeEl = document.getElementById('video-volume');
+    const messageEl = document.getElementById('client-message');
+    const errorBox = document.getElementById('form-error');
+    const btn = document.getElementById('submit-btn');
 
+    const name = nameEl.value.trim();
+    const email = emailEl.value.trim();
+    const company = companyEl ? companyEl.value.trim() : '';
+    const videoLink = videoLinkEl ? videoLinkEl.value.trim() : '';
+    const editingType = editingTypeEl ? editingTypeEl.value : 'YouTube Editing';
+    const volume = volumeEl ? volumeEl.value : '1 Paid Trial Video';
+    const message = messageEl ? messageEl.value.trim() : '';
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!name || !email || !emailRegex.test(email)) {
+      if (errorBox) {
+        errorBox.textContent = 'Please provide a valid name and email address.';
+        errorBox.classList.remove('hidden');
+      }
+      return false;
+    }
+
+    if (errorBox) errorBox.classList.add('hidden');
+    const originalBtnContent = btn.innerHTML;
     btn.disabled = true;
-    btn.innerHTML = `<span class="relative z-10 flex items-center justify-center gap-2"><svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>Transmitting Brief...</span>`;
+    btn.innerHTML = `<span class="relative z-10 flex items-center justify-center gap-2"><svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>Sending your inquiry...</span>`;
 
+    // Send to Web3Forms / Node server
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
         access_key: 'e89cb276-a31d-4701-8cc8-fc52013ef37e',
-        subject: `New High-Ticket Client Project Brief Received: ${name}`,
-        from_name: 'Dhia Studio Website',
-        'Client Name': name, 'Client Email': email, 'Brand / Company': company,
-        'Requested Capabilities': projectType, 'Allocated Budget': budget,
-        'Required Timeline': timeline, 'Strategic Brief Details': details
+        subject: `New Paid Trial Request from ${name} — Dhia Studio`,
+        from_name: 'Dhia Studio Portfolio',
+        'Client Name': name,
+        'Email Address': email,
+        'Channel / Company': company || 'N/A',
+        'Link to Content': videoLink || 'N/A',
+        'Editing Needed': editingType,
+        'Estimated Monthly Volume': volume,
+        'Message / Details': message || 'N/A'
       })
     })
     .then(response => {
       if (response.ok) {
         const formEl = document.getElementById('client-form');
-        formEl.innerHTML = `<div class="flex flex-col items-center text-center py-8 relative z-10 animate-slide-up"><div class="w-20 h-20 bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 rounded-full flex items-center justify-center mb-6 relative"><span class="absolute inset-0 rounded-full bg-[#8B5CF6]/20 animate-ping opacity-75"></span><span class="material-symbols-outlined text-[#8B5CF6] text-5xl relative z-10">check_circle</span></div><h3 class="text-2xl sm:text-3xl font-bold text-white mb-4" style="font-family:Montserrat,sans-serif">Project Brief Received!</h3><p class="text-[#a1a1aa] max-w-lg mb-8 leading-relaxed text-sm sm:text-base">Thank you, <strong class="text-[#8B5CF6]">${name}</strong>. A specialist will contact you at <strong class="text-[#06B6D4]">${email}</strong> within 24 business hours.</p><button onclick="location.reload()" class="bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] text-white font-bold px-8 py-3 rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg shadow-[#8B5CF6]/20 text-sm">Send Another Inquiry</button></div>`;
-      } else { throw new Error('Error'); }
+        formEl.innerHTML = `
+          <div class="flex flex-col items-center text-center py-6 animate-slide-up">
+            <div class="w-16 h-16 bg-[#8B5CF6]/15 border border-[#8B5CF6]/30 rounded-full flex items-center justify-center mb-4 text-[#8B5CF6]">
+              <span class="material-symbols-outlined text-4xl">check_circle</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2 font-heading">Inquiry Received!</h3>
+            <p class="text-zinc-400 text-sm max-w-md mb-6 leading-relaxed">
+              Thanks <strong class="text-white">${name}</strong>. I will review your details and email you at <strong class="text-[#06B6D4]">${email}</strong> with a suggested editing direction and trial options.
+            </p>
+            <button onclick="location.reload()" class="px-6 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition-all">
+              Send another message
+            </button>
+          </div>
+        `;
+      } else {
+        throw new Error('API submission failed');
+      }
     })
     .catch(() => {
-      const subject = encodeURIComponent('New High-Ticket Client Project Brief: ' + name);
-      const body = encodeURIComponent(`Client: ${name}\nEmail: ${email}\nCompany: ${company}\nProject: ${projectType}\nBudget: ${budget}\nTimeline: ${timeline}\n\nDetails:\n${details}`);
-      window.location.href = 'mailto:dhiastudio.agency@gmail.com?subject=' + subject + '&body=' + body;
+      // Direct mailto fallback if endpoint fails
+      const subject = encodeURIComponent(`Paid Trial Inquiry: ${name}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nChannel/Company: ${company}\nContent Link: ${videoLink}\nEditing Needed: ${editingType}\nVolume: ${volume}\n\nMessage:\n${message}`
+      );
+      window.location.href = `mailto:dhia@dhiaeddine.studio?subject=${subject}&body=${body}`;
+      
       btn.disabled = false;
-      btn.innerHTML = originalHTML;
+      btn.innerHTML = originalBtnContent;
     });
+
+    return false;
   }
 </script>
-</body></html>
+
+</body>
+</html>

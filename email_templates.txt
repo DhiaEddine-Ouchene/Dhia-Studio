@@ -1,54 +1,27 @@
 =========================================
-CLIENT INQUIRY EMAIL TEMPLATE
+DHIA STUDIO — CLIENT INQUIRY EMAIL TEMPLATE
 =========================================
 
 [EMAIL SUBJECT LINE]
-New High-Ticket Client Project Brief Received: {{Client Full Name}}
+New Paid Trial Request from {{Client Full Name}} — Dhia Studio
 
 [EMAIL BODY LAYOUT]
 =========================================
-DHIA STUDIO — INBOUND BUSINESS LEAD
+DHIA STUDIO — INBOUND PROJECT INQUIRY
 =========================================
 
 CLIENT INFORMATION:
-- Prospect Name: {{Client Full Name}}
-- Corporate Email: {{Email Address}}
-- Brand/Company: {{Company Name}}
+- Client Name: {{Client Full Name}}
+- Contact Email: {{Email Address}}
+- Channel / Company: {{Company Name}}
+- Content Link: {{Link to Recent Content}}
 
 PROJECT PARAMETERS:
-- Requested Capabilities: {{Project Type}}
-- Allocated Capital/Budget: {{Estimated Budget}}
-- Required Timeframe/Deadline: {{Project Timeline}}
+- Type of Editing Needed: {{Type of Editing Needed}}
+- Approximate Monthly Volume: {{Monthly Video Volume}}
 
-STRATEGIC INTAKE SUMMARY:
-"{{Project Details}}"
-
-=========================================
-ACTION REQUIRED: Evaluate project parameters, verify portfolio availability, and generate a customized contract response within 24 business hours.
-
+PROJECT BRIEF & GOALS:
+"{{Message Details}}"
 
 =========================================
-EDITOR APPLICATION EMAIL TEMPLATE
-=========================================
-
-[EMAIL SUBJECT LINE]
-New Roster Application: {{Creator Full Name}} — {{Primary Creative Role}}
-
-[EMAIL BODY LAYOUT]
-=========================================
-DHIA STUDIO — TALENT ACQUISITION FUNNEL
-=========================================
-
-APPLICANT PROFILE:
-- Talent Name: {{Creator Full Name}}
-- Contact Email: {{Contact Email Address}}
-- Designated Core Competency: {{Primary Creative Role}}
-
-TECHNICAL STACK & MASTERY:
-- Confirmed Software Mastery: {{Software Mastery Checkboxes}}
-
-CREATIVE EVIDENCE:
-- Secure Portfolio Link: {{Portfolio Link URL}}
-
-=========================================
-ACTION REQUIRED: Review the portfolio hyperlink, verify software proficiencies match active project queues, and tag the applicant inside the master agency production roster if approved.
+ACTION REQUIRED: Review the content link, assess editing direction, and respond directly from dhia@dhiaeddine.studio within 24 hours.
