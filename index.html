@@ -397,21 +397,15 @@
         <span>Available for remote projects in the USA, Canada, Europe, and worldwide.</span>
       </div>
 
-      <!-- Dhia Portrait Spot / Visual Anchor -->
-      <div class="mt-10 sm:mt-12 relative flex flex-col items-center">
-        <div class="relative group">
-          <div class="absolute -inset-1 rounded-full bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] opacity-50 blur group-hover:opacity-100 transition duration-500"></div>
-          <!-- 
-            PORTRAIT SPECIFICATIONS:
-            Filename: assets/dhia-portrait.jpg (or .png / .webp)
-            Recommended Dimensions: 400x400px (1:1 square) or 800x1000px (4:5)
-            Current Fallback: Dhia Studio emblem with founder role badge
-          -->
-          <div class="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-white/30 bg-[#0c0c12] p-1 flex items-center justify-center">
-            <img src="./assets/logo.png" alt="Dhia Eddine - Video Editor & Founder" class="w-full h-full object-cover rounded-full" width="96" height="96">
-          </div>
+      <!-- Founder Direct Trust Badge -->
+      <div class="mt-8 sm:mt-10 inline-flex items-center gap-3 px-4 py-2 rounded-2xl glass-card border border-white/10 bg-[#0c0c12]/80 shadow-xl">
+        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#06B6D4] p-[1.5px] flex items-center justify-center flex-shrink-0">
+          <img src="./assets/logo.png" alt="Dhia Studio" class="w-full h-full object-cover rounded-full" width="32" height="32">
         </div>
-        <span class="text-xs text-zinc-400 font-semibold mt-2.5">Dhia Eddine <span class="text-zinc-500">•</span> Founder & Solo Editor</span>
+        <div class="flex flex-col text-left">
+          <span class="text-xs font-bold text-white leading-tight">Dhia Eddine</span>
+          <span class="text-[11px] text-[#06B6D4] font-medium leading-tight">Solo Video Editor & Founder • 100% Direct Collaboration</span>
+        </div>
       </div>
 
     </div>
@@ -924,26 +918,65 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="about-grid">
         
-        <!-- Portrait Container -->
+        <!-- Editing Workspace / Real Footage Showcase Container -->
         <div class="relative flex justify-center">
           <div class="absolute -top-10 -left-10 w-48 h-48 bg-[#8B5CF6]/20 rounded-full blur-3xl opacity-50 floating"></div>
           <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-[#06B6D4]/20 rounded-full blur-3xl opacity-50 floating" style="animation-delay:-3s"></div>
           
-          <div class="relative z-10 rounded-2xl overflow-hidden glass-card p-3 border border-white/10 max-w-sm w-full">
-            <!-- 
-              FOUNDER PORTRAIT:
-              Filename: assets/dhia-portrait.jpg (or .png / .webp)
-              Recommended Dimensions: 600x750px (4:5 portrait ratio)
-            -->
-            <div class="w-full aspect-[4/5] bg-gradient-to-b from-[#121218] to-[#08080c] rounded-xl overflow-hidden flex flex-col items-center justify-center p-6 text-center relative group">
-              <img class="w-32 h-32 rounded-full object-cover shadow-2xl border-2 border-white/20 mb-4 transition-transform duration-500 group-hover:scale-105" src="./assets/logo.png" alt="Dhia Eddine - Video Editor & Founder">
-              <h3 class="text-white font-bold text-lg font-heading">Dhia Eddine</h3>
-              <p class="text-xs text-[#06B6D4] font-medium mt-0.5">Video Editor & Founder, Dhia Studio</p>
-              <div class="mt-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[11px] font-semibold">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>Available for Select Remote Clients</span>
+          <div class="relative z-10 rounded-2xl overflow-hidden glass-card p-3 border border-white/10 max-w-md w-full shadow-2xl">
+            <!-- Timeline Monitor Header -->
+            <div class="flex items-center justify-between px-3 py-2 bg-black/60 rounded-t-xl border-b border-white/10 text-[11px] font-mono">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
+                <span class="ml-2 text-zinc-300 font-bold">TIMELINE // WORKSPACE</span>
+              </div>
+              <div class="flex items-center gap-2 text-[#06B6D4]">
+                <span class="material-symbols-outlined text-sm">tune</span>
+                <span>4K ProRes • 60 FPS</span>
               </div>
             </div>
+
+            <!-- Live Editing Loop from Real Work -->
+            <div class="relative aspect-video w-full overflow-hidden bg-black">
+              <video class="w-full h-full object-cover" muted loop autoplay playsinline preload="metadata">
+                <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1780937212/Horisontal_Show_kzurv2.mp4#t=1" type="video/mp4">
+              </video>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+              
+              <!-- Color Grade / Audio Marker Overlay -->
+              <div class="absolute bottom-2 left-3 right-3 flex items-center justify-between text-[10px] font-mono text-zinc-300">
+                <span class="bg-[#8B5CF6]/80 text-white px-2 py-0.5 rounded font-bold backdrop-blur-md">CUT // COLOR // SOUND</span>
+                <span class="bg-black/70 px-2 py-0.5 rounded border border-white/10 text-emerald-400">● LIVE EDIT SEQUENCE</span>
+              </div>
+            </div>
+
+            <!-- Simulated NLE Timeline Tracks -->
+            <div class="p-3 bg-[#08080c] rounded-b-xl border-t border-white/5 flex flex-col gap-1.5 font-mono text-[10px]">
+              <!-- Video Track V1 -->
+              <div class="flex items-center gap-2">
+                <span class="text-zinc-500 w-6">V1</span>
+                <div class="flex-1 h-3 rounded bg-[#8B5CF6]/30 border border-[#8B5CF6]/50 flex items-center px-1 text-[9px] text-[#d8b4fe] truncate">
+                  Master_A-Roll_ColorGrade.mov
+                </div>
+              </div>
+              <!-- Video Track V2 (B-Roll / Motion) -->
+              <div class="flex items-center gap-2">
+                <span class="text-zinc-500 w-6">V2</span>
+                <div class="flex-1 h-3 rounded bg-[#06B6D4]/30 border border-[#06B6D4]/50 flex items-center px-1 text-[9px] text-[#a5f3fc] truncate">
+                  Motion_Graphics_Typography_Overlay.aep
+                </div>
+              </div>
+              <!-- Audio Track A1 (Vocal + SFX) -->
+              <div class="flex items-center gap-2">
+                <span class="text-zinc-500 w-6">A1</span>
+                <div class="flex-1 h-3 rounded bg-emerald-500/20 border border-emerald-500/40 flex items-center px-1 text-[9px] text-emerald-300 truncate">
+                  Vocal_EQ_Compress_Mastered + Foley_SFX
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -955,14 +988,14 @@
           </div>
 
           <div class="text-[#a1a1aa] text-sm sm:text-base leading-relaxed flex flex-col gap-4">
-            <p>
-              I’m a video editor and the founder of Dhia Studio. I work directly with creators and businesses to transform raw footage into polished content built for clarity, retention, and consistency.
-            </p>
             <p class="text-white font-medium">
-              When you hire Dhia Studio, you work directly with me—from the initial conversation to the final delivery.
+              Hi, I’m Dhia. I’m a solo video editor and the founder of Dhia Studio.
             </p>
             <p>
-              No project managers or outsourced junior editors. I personally handle your pacing, narrative rhythm, graphics, and color grading so your content maintains an uncompromising standard.
+              I work directly with creators and businesses to transform raw footage into polished content built for clarity, retention, and consistency.
+            </p>
+            <p>
+              When you hire Dhia Studio, you work directly with me—from the initial conversation to the final delivery. No project managers or outsourced junior editors. I personally handle your pacing, narrative rhythm, graphics, and color grading so your content maintains an uncompromising standard.
             </p>
           </div>
 

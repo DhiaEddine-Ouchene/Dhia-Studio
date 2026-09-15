@@ -22,20 +22,10 @@ npm start
 Open `http://localhost:3000` in your browser.
 
 ### 2. Static Preview (Without Node.js backend)
-You can directly open `index.html` in any browser or use VS Code Live Server / Python HTTP server:
+You can directly open `index.html` in any browser or use Python HTTP server:
 ```bash
 python -m http.server 8000
 ```
-
----
-
-## 🖼️ Required Assets & Recommendations
-
-| Asset | File Path | Recommended Dimensions | Description |
-|---|---|---|---|
-| **Founder Portrait** | `assets/dhia-portrait.jpg` | **600 × 750 px** (4:5) or **800 × 1000 px** | High-resolution photo of Dhia Eddine for the Hero & About sections. |
-| **Social Sharing (OG) Image** | `assets/og-image.jpg` | **1200 × 630 px** (1.91:1) | Preview image displayed when sharing `https://dhiaeddine.studio` on Twitter, LinkedIn, Discord, and iMessage. |
-| **Brand Logo / Favicon** | `assets/logo.png` | **512 × 512 px** | Dhia Studio circular emblem. |
 
 ---
 
@@ -45,7 +35,7 @@ The contact form supports dual delivery methods:
 
 1. **Web3Forms (Free & Serverless):**
    - In `index.html`, form submissions use Web3Forms API key.
-   - You can update `access_key` with your free key from [web3forms.com](https://web3forms.com).
+   - You can update `access_key` with your key from [web3forms.com](https://web3forms.com).
 
 2. **Node.js Express + SMTP:**
    - Copy `.env.example` to `.env`.
@@ -62,9 +52,7 @@ The contact form supports dual delivery methods:
 ```
 Dhia Studio/
 ├── assets/
-│   ├── logo.png               # Brand icon & logo mark
-│   ├── dhia-portrait.jpg      # (TODO: Add portrait here)
-│   └── og-image.jpg           # (TODO: Add social share image here)
+│   └── logo.png               # Brand icon & logo mark
 ├── index.html                 # Main single-page portfolio
 ├── editors.html               # Redirect to main portfolio
 ├── server.js                  # Express backend & email handler
