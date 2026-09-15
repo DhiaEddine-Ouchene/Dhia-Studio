@@ -442,63 +442,51 @@
       </div>
     </div>
 
-    <!-- Featured Top Project: 16:9 Educational Master (Best Edit) -->
-    <article class="glass-card rounded-3xl overflow-hidden flex flex-col lg:flex-row border border-[#8B5CF6]/30 mb-10 shadow-2xl group bg-[#08080d]" aria-labelledby="featured-proj-title">
-      <!-- 16:9 Video Container -->
-      <div class="relative lg:w-3/5 overflow-hidden bg-black flex items-center justify-center" style="aspect-ratio: 16/9;">
-        <video id="vid0" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="./assets/logo.png">
-          <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1780937212/Horisontal_Show_kzurv2.mp4" type="video/mp4">
-          Your browser does not support HTML5 video.
-        </video>
-        
-        <div class="absolute inset-0 bg-gradient-to-t from-[#050507]/80 via-transparent to-transparent opacity-60 pointer-events-none"></div>
-
-        <!-- Top Badges -->
-        <div class="absolute top-4 left-4 flex flex-wrap gap-2 z-20">
-          <span class="px-3 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] text-white shadow-md">★ Featured Top Project</span>
-          <span class="px-3 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-black/70 text-zinc-200 border border-white/20 backdrop-blur-md">Educational YouTube</span>
-        </div>
-
-        <!-- Video Controls -->
-        <div class="video-controls absolute bottom-4 right-4 flex gap-2 z-20">
-          <button data-vid="vid0" data-action="playpause" class="vid-btn w-11 h-11 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20 shadow-lg" aria-label="Play or pause featured project">
-            <span class="material-symbols-outlined text-xl">play_arrow</span>
-          </button>
-          <button data-vid="vid0" data-action="mute" class="vid-btn w-11 h-11 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20 shadow-lg" aria-label="Toggle mute on featured project">
-            <span class="material-symbols-outlined text-xl">volume_off</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Project Details -->
-      <div class="p-6 sm:p-8 lg:w-2/5 flex flex-col justify-between gap-5 bg-gradient-to-b from-[#0c0c14] to-[#07070b]">
-        <div>
-          <div class="text-xs font-bold text-[#06B6D4] uppercase tracking-widest font-mono mb-2">EDUCATIONAL BREAKDOWN</div>
-          <h3 id="featured-proj-title" class="text-xl sm:text-2xl font-bold text-white font-heading leading-tight">5 Ways to Make Money with Claude & AI</h3>
-          <p class="text-xs sm:text-sm text-zinc-300 mt-3 leading-relaxed">
-            A high-retention educational edit breaking down practical AI workflows. Engineered with rapid visual hooks, custom UI animations, callouts, and spatial sound design to prevent drop-off.
-          </p>
-          
-          <div class="mt-4 flex flex-col gap-2 text-xs text-zinc-400">
-            <div><strong class="text-white">Objective:</strong> Deliver a fast-paced breakdown on leveraging modern AI tools without viewer fatigue.</div>
-            <div><strong class="text-white">Editing craft:</strong> Dynamic pacing, motion graphics, UI callouts, sound design, and color grading.</div>
-          </div>
-        </div>
-
-        <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-zinc-400">
-          <span class="text-[#06B6D4] font-semibold">16:9 Long-Form Master + Vertical Cuts</span>
-          <a href="#contact" class="text-[#8B5CF6] font-bold hover:text-white inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-all">Start a project <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Clean Responsive Grid -->
+    <!-- Clean Responsive Portfolio Grid -->
     <div class="portfolio-grid">
 
-      <!-- Project 1: Career Strategy / Talking-Head Edit -->
+      <!-- Video 1 (Top Project): AI & Tech Educational Breakdown -->
       <article class="glass-card rounded-2xl overflow-hidden flex flex-col group" aria-labelledby="proj1-title">
         <div class="relative overflow-hidden bg-black" style="aspect-ratio: 9/16; max-height: 480px;">
           <video id="vid1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" muted loop playsinline preload="metadata" poster="./assets/logo.png">
+            <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1780937212/Horisontal_Show_kzurv2.mp4#t=1" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+          
+          <div class="absolute inset-0 bg-gradient-to-t from-[#050507] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+          
+          <div class="absolute top-3 left-3 flex gap-2">
+            <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-[#8B5CF6]/90 text-white backdrop-blur-md">Educational YouTube</span>
+            <span class="px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-black/60 text-zinc-300 border border-white/20 backdrop-blur-md">Top Project</span>
+          </div>
+
+          <div class="video-controls absolute bottom-3 right-3 flex gap-2 z-20">
+            <button data-vid="vid1" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause AI breakdown video">
+              <span class="material-symbols-outlined text-lg">play_arrow</span>
+            </button>
+            <button data-vid="vid1" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Toggle mute on AI breakdown video">
+              <span class="material-symbols-outlined text-lg">volume_off</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="p-5 flex flex-col flex-grow justify-between gap-3 bg-[#08080c]">
+          <div>
+            <h3 id="proj1-title" class="text-lg font-bold text-white font-heading">5 Ways to Make Money with Claude & AI</h3>
+            <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Objective:</strong> Deliver a high-retention breakdown on leveraging modern AI tools without viewer fatigue.</p>
+            <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Editing craft:</strong> Dynamic B-roll pacing, animated UI overlays, callouts, and audio mastering.</p>
+          </div>
+          <div class="pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-zinc-400">
+            <span><strong class="text-[#06B6D4]">Deliverables:</strong> 1 Long-form Edit + 3 Shorts</span>
+            <span class="text-zinc-500 font-mono">Featured Edit</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Video 2: Career Strategy / Talking-Head Edit -->
+      <article class="glass-card rounded-2xl overflow-hidden flex flex-col group" aria-labelledby="proj2-title">
+        <div class="relative overflow-hidden bg-black" style="aspect-ratio: 9/16; max-height: 480px;">
+          <video id="vid2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" muted loop playsinline preload="metadata" poster="./assets/logo.png">
             <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321761/reach_1_final_qsqai9.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
           </video>
@@ -511,10 +499,10 @@
           </div>
 
           <div class="video-controls absolute bottom-3 right-3 flex gap-2 z-20">
-            <button data-vid="vid1" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause Career Strategy video">
+            <button data-vid="vid2" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause Career Strategy video">
               <span class="material-symbols-outlined text-lg">play_arrow</span>
             </button>
-            <button data-vid="vid1" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Toggle mute on Career Strategy video">
+            <button data-vid="vid2" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Toggle mute on Career Strategy video">
               <span class="material-symbols-outlined text-lg">volume_off</span>
             </button>
           </div>
@@ -522,7 +510,7 @@
 
         <div class="p-5 flex flex-col flex-grow justify-between gap-3 bg-[#08080c]">
           <div>
-            <h3 id="proj1-title" class="text-lg font-bold text-white font-heading">When to Quit Your Job?</h3>
+            <h3 id="proj2-title" class="text-lg font-bold text-white font-heading">When to Quit Your Job?</h3>
             <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Objective:</strong> Maximize viewer watch time on key decision points through emotional hook & rhythmic cutting.</p>
             <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Editing craft:</strong> Hook pacing, kinetic typography captions, sound effects, and color grading.</p>
           </div>
@@ -533,10 +521,10 @@
         </div>
       </article>
 
-      <!-- Project 2: Coach Mindset & Life Advice -->
-      <article class="glass-card rounded-2xl overflow-hidden flex flex-col group" aria-labelledby="proj2-title">
+      <!-- Video 3: Coach Mindset & Life Advice -->
+      <article class="glass-card rounded-2xl overflow-hidden flex flex-col group" aria-labelledby="proj3-title">
         <div class="relative overflow-hidden bg-black" style="aspect-ratio: 9/16; max-height: 480px;">
-          <video id="vid2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" muted loop playsinline preload="metadata" poster="./assets/logo.png">
+          <video id="vid3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" muted loop playsinline preload="metadata" poster="./assets/logo.png">
             <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779322705/Advice_1_Show_bu7n6d.mp4#t=1.6" type="video/mp4">
             Your browser does not support HTML5 video.
           </video>
@@ -549,10 +537,10 @@
           </div>
 
           <div class="video-controls absolute bottom-3 right-3 flex gap-2 z-20">
-            <button data-vid="vid2" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause Mindset video">
+            <button data-vid="vid3" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause Mindset video">
               <span class="material-symbols-outlined text-lg">play_arrow</span>
             </button>
-            <button data-vid="vid2" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Toggle mute on Mindset video">
+            <button data-vid="vid3" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Toggle mute on Mindset video">
               <span class="material-symbols-outlined text-lg">volume_off</span>
             </button>
           </div>
@@ -560,7 +548,7 @@
 
         <div class="p-5 flex flex-col flex-grow justify-between gap-3 bg-[#08080c]">
           <div>
-            <h3 id="proj2-title" class="text-lg font-bold text-white font-heading">Core Life Lessons for High Performers</h3>
+            <h3 id="proj3-title" class="text-lg font-bold text-white font-heading">Core Life Lessons for High Performers</h3>
             <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Objective:</strong> Create an intimate, compelling advisory piece for consultant personal branding.</p>
             <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Editing craft:</strong> Seamless sentence restructuring, subtle zoom punches, and warm skin-tone grading.</p>
           </div>
@@ -571,10 +559,10 @@
         </div>
       </article>
 
-      <!-- Project 3: Time Mastery / Educational Short -->
-      <article class="glass-card rounded-2xl overflow-hidden flex flex-col group" aria-labelledby="proj3-title">
+      <!-- Video 4: Time Mastery / Educational Short -->
+      <article class="glass-card rounded-2xl overflow-hidden flex flex-col group" aria-labelledby="proj4-title">
         <div class="relative overflow-hidden bg-black" style="aspect-ratio: 9/16; max-height: 480px;">
-          <video id="vid3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" muted loop playsinline preload="metadata" poster="./assets/logo.png">
+          <video id="vid4" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" muted loop playsinline preload="metadata" poster="./assets/logo.png">
             <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321749/Day_1_show_ekxlxo.mp4#t=1" type="video/mp4">
             Your browser does not support HTML5 video.
           </video>
@@ -587,10 +575,10 @@
           </div>
 
           <div class="video-controls absolute bottom-3 right-3 flex gap-2 z-20">
-            <button data-vid="vid3" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause Time Mastery video">
+            <button data-vid="vid4" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause Time Mastery video">
               <span class="material-symbols-outlined text-lg">play_arrow</span>
             </button>
-            <button data-vid="vid3" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Toggle mute on Time Mastery video">
+            <button data-vid="vid4" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Toggle mute on Time Mastery video">
               <span class="material-symbols-outlined text-lg">volume_off</span>
             </button>
           </div>
@@ -598,7 +586,7 @@
 
         <div class="p-5 flex flex-col flex-grow justify-between gap-3 bg-[#08080c]">
           <div>
-            <h3 id="proj3-title" class="text-lg font-bold text-white font-heading">Productivity & Time Architecture</h3>
+            <h3 id="proj4-title" class="text-lg font-bold text-white font-heading">Productivity & Time Architecture</h3>
             <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Objective:</strong> Compress a 10-minute podcast into a punchy 45-second high-yield viral short.</p>
             <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Editing craft:</strong> Content repurposing, dynamic caption tracking, and auditory pattern interrupts.</p>
           </div>
@@ -609,10 +597,10 @@
         </div>
       </article>
 
-      <!-- Project 4: Apple Aesthetic / Minimal Storytelling -->
-      <article class="glass-card rounded-2xl overflow-hidden flex flex-col group" aria-labelledby="proj4-title">
+      <!-- Video 5: Apple Aesthetic / Minimal Storytelling -->
+      <article class="glass-card rounded-2xl overflow-hidden flex flex-col group" aria-labelledby="proj5-title">
         <div class="relative overflow-hidden bg-black" style="aspect-ratio: 9/16; max-height: 480px;">
-          <video id="vid4" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" muted loop playsinline preload="metadata" poster="./assets/logo.png">
+          <video id="vid5" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" muted loop playsinline preload="metadata" poster="./assets/logo.png">
             <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321749/Day_2_show_vvjbwn.mp4#t=2" type="video/mp4">
             Your browser does not support HTML5 video.
           </video>
@@ -625,10 +613,10 @@
           </div>
 
           <div class="video-controls absolute bottom-3 right-3 flex gap-2 z-20">
-            <button data-vid="vid4" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause Visual Storytelling video">
+            <button data-vid="vid5" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause Visual Storytelling video">
               <span class="material-symbols-outlined text-lg">play_arrow</span>
             </button>
-            <button data-vid="vid4" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Toggle mute on Visual Storytelling video">
+            <button data-vid="vid5" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Toggle mute on Visual Storytelling video">
               <span class="material-symbols-outlined text-lg">volume_off</span>
             </button>
           </div>
@@ -636,7 +624,7 @@
 
         <div class="p-5 flex flex-col flex-grow justify-between gap-3 bg-[#08080c]">
           <div>
-            <h3 id="proj4-title" class="text-lg font-bold text-white font-heading">Clean Minimal Aesthetics</h3>
+            <h3 id="proj5-title" class="text-lg font-bold text-white font-heading">Clean Minimal Aesthetics</h3>
             <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Objective:</strong> Deliver an understated, luxury presentation with restrained, tasteful graphics.</p>
             <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Editing craft:</strong> Precise color balance, elegant typography layout, and smooth micro-transitions.</p>
           </div>
@@ -647,10 +635,10 @@
         </div>
       </article>
 
-      <!-- Project 5: Motion Design & Marketing Strategy -->
-      <article class="glass-card rounded-2xl overflow-hidden flex flex-col group" aria-labelledby="proj5-title">
+      <!-- Video 6: Motion Design & Marketing Strategy -->
+      <article class="glass-card rounded-2xl overflow-hidden flex flex-col group" aria-labelledby="proj6-title">
         <div class="relative overflow-hidden bg-black" style="aspect-ratio: 9/16; max-height: 480px;">
-          <video id="vid5" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" muted loop playsinline preload="metadata" poster="./assets/logo.png">
+          <video id="vid6" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" muted loop playsinline preload="metadata" poster="./assets/logo.png">
             <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321753/%D9%85%D9%88%D9%86%D8%AA%D8%A7%D8%AC_%D9%81%D9%8A%D8%AF%D9%8A%D9%88_%D8%AC%D8%AF%D9%8A%D8%AF_New_edit_video..Edit_by_yasser_video_editor.._edit_editing_dz_motiondes_nud2pp.mp4#t=1.2" type="video/mp4">
             Your browser does not support HTML5 video.
           </video>
@@ -663,10 +651,10 @@
           </div>
 
           <div class="video-controls absolute bottom-3 right-3 flex gap-2 z-20">
-            <button data-vid="vid5" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause Motion Graphics video">
+            <button data-vid="vid6" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause Motion Graphics video">
               <span class="material-symbols-outlined text-lg">play_arrow</span>
             </button>
-            <button data-vid="vid5" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Toggle mute on Motion Graphics video">
+            <button data-vid="vid6" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Toggle mute on Motion Graphics video">
               <span class="material-symbols-outlined text-lg">volume_off</span>
             </button>
           </div>
@@ -674,7 +662,7 @@
 
         <div class="p-5 flex flex-col flex-grow justify-between gap-3 bg-[#08080c]">
           <div>
-            <h3 id="proj5-title" class="text-lg font-bold text-white font-heading">Digital Scale Strategy</h3>
+            <h3 id="proj6-title" class="text-lg font-bold text-white font-heading">Digital Scale Strategy</h3>
             <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Objective:</strong> Illustrate abstract marketing concepts with seamless 2D vector animations and charts.</p>
             <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Editing craft:</strong> Motion graphics in After Effects, asset styling, and spatial sound design.</p>
           </div>
@@ -685,10 +673,10 @@
         </div>
       </article>
 
-      <!-- Project 6: Narrative & Story Power -->
-      <article class="glass-card rounded-2xl overflow-hidden flex flex-col group" aria-labelledby="proj6-title">
+      <!-- Video 7: Narrative & Story Power -->
+      <article class="glass-card rounded-2xl overflow-hidden flex flex-col group" aria-labelledby="proj7-title">
         <div class="relative overflow-hidden bg-black" style="aspect-ratio: 9/16; max-height: 480px;">
-          <video id="vid6" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" muted loop playsinline preload="metadata" poster="./assets/logo.png">
+          <video id="vid7" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" muted loop playsinline preload="metadata" poster="./assets/logo.png">
             <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1779321750/port_1_a7nvhy.mp4#t=4" type="video/mp4">
             Your browser does not support HTML5 video.
           </video>
@@ -701,10 +689,10 @@
           </div>
 
           <div class="video-controls absolute bottom-3 right-3 flex gap-2 z-20">
-            <button data-vid="vid6" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause Narrative video">
+            <button data-vid="vid7" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause Narrative video">
               <span class="material-symbols-outlined text-lg">play_arrow</span>
             </button>
-            <button data-vid="vid6" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Toggle mute on Narrative video">
+            <button data-vid="vid7" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Toggle mute on Narrative video">
               <span class="material-symbols-outlined text-lg">volume_off</span>
             </button>
           </div>
@@ -712,7 +700,7 @@
 
         <div class="p-5 flex flex-col flex-grow justify-between gap-3 bg-[#08080c]">
           <div>
-            <h3 id="proj6-title" class="text-lg font-bold text-white font-heading">Story Power & Narrative Flow</h3>
+            <h3 id="proj7-title" class="text-lg font-bold text-white font-heading">Story Power & Narrative Flow</h3>
             <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Objective:</strong> Craft compelling narrative momentum that retains viewers from the first hook to the CTA.</p>
             <p class="text-xs text-zinc-400 mt-1"><strong class="text-zinc-300">Editing craft:</strong> Dynamic pacing, emotional music integration, and seamless transitions.</p>
           </div>
