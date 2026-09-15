@@ -314,7 +314,6 @@
       <!-- Desktop Navigation Links -->
       <div class="hidden md:flex items-center gap-7 lg:gap-9">
         <a class="text-zinc-300 font-semibold text-sm hover:text-[#8B5CF6] transition-colors focus:text-[#8B5CF6]" href="#work">Work</a>
-        <a class="text-zinc-400 font-medium text-sm hover:text-[#06B6D4] transition-colors focus:text-[#06B6D4]" href="#showreel">Showreel</a>
         <a class="text-zinc-400 font-medium text-sm hover:text-[#8B5CF6] transition-colors focus:text-[#8B5CF6]" href="#services">Services</a>
         <a class="text-zinc-400 font-medium text-sm hover:text-[#06B6D4] transition-colors focus:text-[#06B6D4]" href="#about">About</a>
         <a class="text-zinc-400 font-medium text-sm hover:text-[#8B5CF6] transition-colors focus:text-[#8B5CF6]" href="#process">Process</a>
@@ -339,7 +338,6 @@
     <!-- Mobile Drawer Menu -->
     <div id="mobile-menu" role="menu" aria-label="Mobile Navigation">
       <a href="#work" class="mobile-link" role="menuitem">Work</a>
-      <a href="#showreel" class="mobile-link" role="menuitem">Showreel</a>
       <a href="#services" class="mobile-link" role="menuitem">Services</a>
       <a href="#about" class="mobile-link" role="menuitem">About</a>
       <a href="#process" class="mobile-link" role="menuitem">Process</a>
@@ -443,6 +441,56 @@
         <span class="text-xs px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-zinc-300 font-semibold">Motion Graphics</span>
       </div>
     </div>
+
+    <!-- Featured Top Project: 16:9 Educational Master (Best Edit) -->
+    <article class="glass-card rounded-3xl overflow-hidden flex flex-col lg:flex-row border border-[#8B5CF6]/30 mb-10 shadow-2xl group bg-[#08080d]" aria-labelledby="featured-proj-title">
+      <!-- 16:9 Video Container -->
+      <div class="relative lg:w-3/5 overflow-hidden bg-black flex items-center justify-center" style="aspect-ratio: 16/9;">
+        <video id="vid0" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]" muted loop playsinline preload="metadata" poster="./assets/logo.png">
+          <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1780937212/Horisontal_Show_kzurv2.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-[#050507]/80 via-transparent to-transparent opacity-60 pointer-events-none"></div>
+
+        <!-- Top Badges -->
+        <div class="absolute top-4 left-4 flex flex-wrap gap-2 z-20">
+          <span class="px-3 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-gradient-to-r from-[#8B5CF6] to-[#06B6D4] text-white shadow-md">★ Featured Top Project</span>
+          <span class="px-3 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-black/70 text-zinc-200 border border-white/20 backdrop-blur-md">Educational YouTube</span>
+        </div>
+
+        <!-- Video Controls -->
+        <div class="video-controls absolute bottom-4 right-4 flex gap-2 z-20">
+          <button data-vid="vid0" data-action="playpause" class="vid-btn w-11 h-11 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20 shadow-lg" aria-label="Play or pause featured project">
+            <span class="material-symbols-outlined text-xl">play_arrow</span>
+          </button>
+          <button data-vid="vid0" data-action="mute" class="vid-btn w-11 h-11 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20 shadow-lg" aria-label="Toggle mute on featured project">
+            <span class="material-symbols-outlined text-xl">volume_off</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Project Details -->
+      <div class="p-6 sm:p-8 lg:w-2/5 flex flex-col justify-between gap-5 bg-gradient-to-b from-[#0c0c14] to-[#07070b]">
+        <div>
+          <div class="text-xs font-bold text-[#06B6D4] uppercase tracking-widest font-mono mb-2">EDUCATIONAL BREAKDOWN</div>
+          <h3 id="featured-proj-title" class="text-xl sm:text-2xl font-bold text-white font-heading leading-tight">5 Ways to Make Money with Claude & AI</h3>
+          <p class="text-xs sm:text-sm text-zinc-300 mt-3 leading-relaxed">
+            A high-retention educational edit breaking down practical AI workflows. Engineered with rapid visual hooks, custom UI animations, callouts, and spatial sound design to prevent drop-off.
+          </p>
+          
+          <div class="mt-4 flex flex-col gap-2 text-xs text-zinc-400">
+            <div><strong class="text-white">Objective:</strong> Deliver a fast-paced breakdown on leveraging modern AI tools without viewer fatigue.</div>
+            <div><strong class="text-white">Editing craft:</strong> Dynamic pacing, motion graphics, UI callouts, sound design, and color grading.</div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-zinc-400">
+          <span class="text-[#06B6D4] font-semibold">16:9 Long-Form Master + Vertical Cuts</span>
+          <a href="#contact" class="text-[#8B5CF6] font-bold hover:text-white inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-all">Start a project <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+        </div>
+      </div>
+    </article>
 
     <!-- Clean Responsive Grid -->
     <div class="portfolio-grid">
@@ -678,43 +726,7 @@
     </div>
   </section>
 
-  <!-- 3. Editing Showreel Section (Original Showreel Restored) -->
-  <section class="py-16 sm:py-24 px-4 sm:px-6 max-w-5xl mx-auto" id="showreel">
-    <div class="text-center mb-10 sm:mb-12">
-      <span class="text-xs font-bold text-[#06B6D4] uppercase tracking-widest font-mono">CINEMATIC REEL</span>
-      <h2 class="sec-headline mt-1 text-white">Editing showreel</h2>
-      <p class="text-[#a1a1aa] max-w-2xl mx-auto text-sm sm:text-base mt-2 leading-relaxed">
-        A selection of my work across long-form videos, short-form content, motion graphics, and visual storytelling.
-      </p>
-    </div>
-
-    <div class="relative glass-card rounded-2xl overflow-hidden border border-white/10 shadow-2xl group bg-black" style="aspect-ratio: 16/9;">
-      <video id="main-showreel" class="w-full h-full object-cover" muted loop playsinline preload="metadata" poster="./assets/logo.png">
-        <source src="https://res.cloudinary.com/db09f0d4x/video/upload/q_auto/f_auto/v1780937212/Horisontal_Show_kzurv2.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video>
-
-      <!-- Center Play Trigger Overlay -->
-      <div id="showreel-overlay" class="absolute inset-0 bg-black/40 backdrop-blur-[2px] flex flex-col items-center justify-center cursor-pointer transition-opacity duration-300">
-        <button id="showreel-main-btn" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-tr from-[#8B5CF6] to-[#06B6D4] text-white flex items-center justify-center shadow-2xl shadow-[#8B5CF6]/40 hover:scale-110 transition-transform" aria-label="Play editing showreel with audio">
-          <span class="material-symbols-outlined text-3xl sm:text-4xl">play_arrow</span>
-        </button>
-        <span class="text-white font-bold text-xs sm:text-sm mt-3 tracking-wider uppercase font-heading">Watch Showreel</span>
-      </div>
-
-      <!-- Showreel bottom controls -->
-      <div class="absolute bottom-4 right-4 flex items-center gap-2 z-20">
-        <button data-vid="main-showreel" data-action="playpause" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#8B5CF6] transition-colors text-white border border-white/20" aria-label="Play or pause showreel">
-          <span class="material-symbols-outlined text-lg">play_arrow</span>
-        </button>
-        <button data-vid="main-showreel" data-action="mute" class="vid-btn w-10 h-10 rounded-full bg-black/70 backdrop-blur-md flex items-center justify-center hover:bg-[#06B6D4] transition-colors text-white border border-white/20" aria-label="Mute or unmute showreel">
-          <span class="material-symbols-outlined text-lg">volume_off</span>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. Focused Services Section -->
+  <!-- 3. Focused Services Section -->
   <section class="py-16 sm:py-24 bg-[#050507] relative" id="services">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       
@@ -1174,21 +1186,6 @@
     });
   });
 
-  // Showreel Center Overlay Trigger
-  const showreelOverlay = document.getElementById('showreel-overlay');
-  const showreelVideo = document.getElementById('main-showreel');
-  if (showreelOverlay && showreelVideo) {
-    showreelOverlay.addEventListener('click', () => {
-      showreelVideo.muted = false;
-      showreelVideo.play().then(() => {
-        showreelOverlay.classList.add('opacity-0', 'pointer-events-none');
-      }).catch(() => {
-        showreelVideo.muted = true;
-        showreelVideo.play();
-        showreelOverlay.classList.add('opacity-0', 'pointer-events-none');
-      });
-    });
-  }
 
   // Client Contact Form Handler with Validation and Fallbacks
   function handleClientForm(e) {
